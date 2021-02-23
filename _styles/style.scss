@@ -1,0 +1,95 @@
+$primary-red: #ff0000;
+$secondary-red: #ff0000;
+$white: #fefefe;
+
+
+body{
+	background: black;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+
+h1, h2, h3, h4, p.p1{
+	font-family: gopher, 'Prompt', sans-serif;
+}
+h1{
+	font-size: 10em;
+}
+h2{
+	font-size: 4em;
+	margin-bottom: 2rem; 
+}
+p, a{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	&.p1{
+		font-family: 'Prompt', sans-serif;
+		font-size: 2.5em;
+		line-height: 2.5rem;
+	}
+	&.light{
+		font-weight: 300;
+	}
+	span.italic{
+		font-style: italic;
+	}
+}
+
+a.button{
+	height: 1.25em;
+	padding: 0.5em 1em;
+	border-radius: 1.25em; 
+	box-sizing: border-box;
+	text-decoration: none;
+	&.primary{
+		background: $primary-red;
+		color: white;
+	}
+	&.secondary{
+		border: 1px solid $white;
+		color: $white;
+	}
+}
+
+main.home{
+	img.background-img{
+		position: absolute;
+		top: 10vw;
+		left: 5vw;
+		// padding: 10vw;
+		width: 90vw;
+		// height: 100vh;
+	}
+	section{
+		height: 100vh;
+		border: 1px dotted grey;
+		div{
+
+		}
+	}
+
+}
+
+footer{
+	background: $primary-red;
+	height: 5em;
+	padding: 1em 0em;
+	display: flex;
+	p{
+		margin: 0;
+	}
+	.footer-col{
+		align-content: baseline;
+		// display: inline-block;
+		width: 12vw;
+	}
+	.social .social-icon{
+		display: inline-block;
+		width: 2em;
+		height: 2em;
+		background: white;
+		color: black;
+	}
+}

@@ -1,0 +1,82 @@
+body {
+  background: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p.p1 {
+  font-family: gopher, "Prompt", sans-serif;
+}
+
+h1 {
+  font-size: 10em;
+}
+
+h2 {
+  font-size: 4em;
+  margin-bottom: 2rem;
+}
+
+p, a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+p.p1, a.p1 {
+  font-family: "Prompt", sans-serif;
+  font-size: 2.5em;
+  line-height: 2.5rem;
+}
+p.light, a.light {
+  font-weight: 300;
+}
+p span.italic, a span.italic {
+  font-style: italic;
+}
+
+a.button {
+  height: 1.25em;
+  padding: 0.5em 1em;
+  border-radius: 1.25em;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+a.button.primary {
+  background: #ff0000;
+  color: white;
+}
+a.button.secondary {
+  border: 1px solid #fefefe;
+  color: #fefefe;
+}
+
+main.home img.background-img {
+  position: absolute;
+  top: 10vw;
+  left: 5vw;
+  width: 90vw;
+}
+main.home section {
+  height: 100vh;
+  border: 1px dotted grey;
+}
+footer {
+  background: #ff0000;
+  height: 5em;
+  padding: 1em 0em;
+  display: flex;
+}
+footer p {
+  margin: 0;
+}
+footer .footer-col {
+  align-content: baseline;
+  width: 12vw;
+}
+footer .social .social-icon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background: white;
+  color: black;
+}
