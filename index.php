@@ -13,33 +13,35 @@
 		<link rel="stylesheet" href="https://use.typekit.net/yxs1iyp.css">
 		<!-- styles -->
 		<link rel="stylesheet" href="_styles/style.css">
+		<!-- scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.11/paper-full.min.js" integrity="sha512-ehNJ9gpOQJn8EYlA3P1zUtfrh97G/6WNsjfPfpnMxbo6PX6UXHRj8Ny5MCd36w2eTPlvOSVuXLZmY+/VLVhI4A==" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<nav></nav>
+		<img src="assets/Grid-Home.svg" id="background-grid" alt="grid" class="background-img">		
+		<canvas id="header"></canvas>
 		<main class="home">
-			<img src="assets/Grid-Home.svg" alt="grid" class="background-img">		
-			<section class="home header">
+			<div class="header">
 				<h1>NORMAL</h1>
-			</section>
-			<section class="home schedule">
-				<div>
-					<h2>May 14-16</h2>
-					<a class="button primary" href="/schedule">View schedule</a>
-				</div>
-			</section>
-			<section class="home about">
-				<div>
-					<p class="p1">Curated by Furusho von Puttkammer, <span class="italic">AiOP 2021: NORMAL</span> will present artists who seek to critique the mythos of the American Dream and the history of American politics.</p>
-					<a class="button primary" href="/about">More about it</a>
-				</div>
-			</section>
-			<section class="home artists">
-				<div>
-					<h2>Participating artists & groups</h2>
-					<a class="button primary" href="/artists">Explore projects</a>
-					<a class="button secondary" href="/schedule">Views schedule</a>
-				</div>
-			</section>
+			</div>
+			<div class="scroll">
+				<img src="assets/Down-Arrow.png" alt="scroll down">
+			</div>
+			<img class="schedule" src="assets/Blob-2021.png" alt="2021">
+			<div class="schedule">
+				<h2>May 14-16</h2>
+				<a class="button primary" href="/schedule">View schedule</a>
+			</div>
+			<div class="about ">
+				<p class="p1">Curated by Furusho von Puttkammer, <span class="italic">AiOP 2021: NORMAL</span> will present artists who seek to critique the mythos of the American Dream and the history of American politics.</p>
+				<a class="button primary" href="/about">More about it</a>
+			</div>
+			<img class="artists" src="assets/Blob-62.png" alt="62">
+			<div class="artists ">
+				<h2>Participating </br>artists & groups</h2>
+				<a class="button primary" href="/artists">Explore projects</a>
+				<a class="button secondary" href="/schedule">Views schedule</a>
+			</div>
 		</main>
 		<footer>
 			<div class="footer-col">
@@ -74,5 +76,10 @@
 				<p>All Rights Reserved</p>
 			</div>
 		</footer>
+
+		<script src="scripts/main.js" type="text/paperscript" canvas="header"></script>
+
 	</body>
 </html>
+
+
