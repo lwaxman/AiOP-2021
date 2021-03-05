@@ -15,6 +15,15 @@ canvas {
   mix-blend-mode: exclusion;
 }
 
+nav {
+  width: 50%;
+  position: fixed;
+  text-align: right;
+  margin-top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
 h1, h2, h3, h4, p.p1 {
   font-family: gopher, "Prompt", sans-serif;
   line-height: 1em;
@@ -27,6 +36,11 @@ h1 {
 h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 p, a {
@@ -62,7 +76,7 @@ a.button.secondary {
 }
 
 img.background-img {
-  position: absolute;
+  position: fixed;
   mix-blend-mode: hard-light;
   top: 7.5rem;
   left: 5vw;
@@ -76,16 +90,24 @@ main.home {
   margin-left: 24px;
 }
 main.home .header {
-  height: 90vh;
+  height: 100%;
   width: 100vw;
   margin-left: -24px;
   position: relative;
 }
-main.home .header h1 {
-  position: absolute;
-  top: 40%;
+main.home .header img#aiopLogo {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 8rem;
+}
+main.home .header div#placeholder {
   width: 100%;
-  text-align: center;
+  height: 100%;
+  background: url("../assets/Placeholder_M.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 main.home .scroll {
   margin-top: -1rem;
@@ -111,17 +133,26 @@ main.home div:not(:first-child) h2 {
 }
 
 footer {
-  background: #D72027;
-  height: 5em;
+  background: #AD1F25;
   padding: 1em 0em;
-  display: flex;
+  padding: 1.5rem;
 }
 footer p {
   margin: 0;
 }
+footer a {
+  color: white;
+}
 footer .footer-col {
   align-content: baseline;
-  width: 12vw;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: top;
+}
+footer .footer-col#footer-curator, footer .footer-col#footer-founder {
+  width: 48%;
 }
 footer .social .social-icon {
   display: inline-block;
@@ -147,6 +178,10 @@ footer .social .social-icon {
     line-height: 1.1em;
   }
 
+  nav {
+    right: 2rem;
+  }
+
   main.home {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -164,8 +199,17 @@ footer .social .social-icon {
     grid-column-start: 1;
     grid-column-end: span 12;
   }
-  main.home div.header h1 {
-    top: 30%;
+  main.home div.header img#aiopLogo {
+    top: 2rem;
+    left: 2rem;
+  }
+  main.home div.header div#placeholder {
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/Placeholder_D.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
   main.home div.scroll {
     grid-row-start: 2;
@@ -209,17 +253,52 @@ footer .social .social-icon {
   }
 
   footer {
-    background: #D72027;
-    height: 5em;
-    padding: 1em 0em;
-    display: flex;
+    width: 100%;
+    display: inline-block;
+    padding: 1em;
   }
   footer p {
     margin: 0;
   }
   footer .footer-col {
     align-content: baseline;
-    width: 12vw;
+    width: 30%;
+  }
+  footer .footer-col#footer-curator, footer .footer-col#footer-founder {
+    width: 30%;
+  }
+  footer .footer-col#footer-copyright {
+    width: 100%;
+  }
+  footer .social .social-icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: white;
+    color: black;
+    border-radius: 1em;
+  }
+}
+@media screen and (min-width: 1080px) {
+  footer {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  footer p {
+    margin: 0;
+  }
+  footer .footer-col {
+    padding: 1em;
+    align-content: baseline;
+    width: auto;
+  }
+  footer .footer-col#footer-curator, footer .footer-col#footer-founder, footer .footer-col#footer-copyright {
+    width: auto;
+  }
+  footer .footer-col#footer-location {
+    width: 15%;
   }
   footer .social .social-icon {
     display: inline-block;
