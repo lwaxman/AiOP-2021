@@ -1,0 +1,328 @@
+/*
+Theme Name: AiOP NORMAL
+Theme URI: http://lauriewaxman.com
+Author: Laurie Waxman
+Author URI: http://lauriewaxman.com
+Description: The 2021 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: aiop-normal
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body {
+  background: black;
+  color: white;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  z-index: -5;
+  mix-blend-mode: exclusion;
+}
+
+nav {
+  width: 50%;
+  position: fixed;
+  text-align: right;
+  margin-top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+h1, h2, h3, h4, p.p1 {
+  font-family: gopher, "Prompt", sans-serif;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+p, a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+p.p1, a.p1 {
+  font-family: gopher, "Prompt", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25em;
+}
+p.light, a.light {
+  font-weight: 300;
+}
+p span.italic, a span.italic {
+  font-style: italic;
+}
+
+a.button {
+  height: 1.25em;
+  padding: 0.5em 1em;
+  border-radius: 1.25em;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+a.button.primary {
+  background: #D72027;
+  color: white;
+}
+a.button.secondary {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+img.background-img {
+  position: fixed;
+  mix-blend-mode: hard-light;
+  top: 7.5rem;
+  left: 2rem;
+  width: calc(100% - 4rem);
+  z-index: -10;
+}
+
+main.home {
+  display: block;
+  width: calc(100% - 48px);
+  margin-left: 24px;
+}
+main.home .header {
+  height: 100%;
+  width: 100vw;
+  margin-left: -24px;
+  position: relative;
+}
+main.home .header img#aiopLogo {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 8rem;
+}
+main.home .header div#placeholder {
+  width: 100%;
+  height: 100%;
+  background: url("assets/Placeholder_M.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+main.home .scroll {
+  margin-top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.home .scroll img {
+  width: auto;
+  padding: 1rem 0.5rem;
+  border: 1px solid #6B98AD;
+  border-radius: 2rem;
+}
+main.home img {
+  width: 100%;
+}
+main.home div:not(:first-child) {
+  margin-bottom: 14rem;
+  margin-top: -2rem;
+}
+main.home div:not(:first-child) h2 {
+  margin-top: 0px;
+}
+
+footer {
+  background: #AD1F25;
+  padding: 1em 0em;
+  padding: 1.5rem;
+}
+footer p {
+  margin: 0;
+}
+footer a {
+  color: white;
+}
+footer .footer-col {
+  align-content: baseline;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: top;
+}
+footer .footer-col#footer-curator, footer .footer-col#footer-founder {
+  width: 48%;
+}
+footer .social .social-icon {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background: white;
+  color: black;
+  border-radius: 1em;
+}
+
+@media screen and (min-width: 720px) {
+  h1 {
+    font-size: 10em;
+  }
+
+  h2 {
+    font-size: 4em;
+    margin-bottom: 2rem;
+  }
+
+  p.p1 {
+    font-size: 2.5em;
+    line-height: 1.1em;
+  }
+
+  nav {
+    right: 2rem;
+  }
+
+  main.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 90vh 10vh auto auto auto;
+    column-gap: 1.5rem;
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+  }
+  main.home div {
+    margin-top: 0px;
+  }
+  main.home div.header {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: span 12;
+  }
+  main.home div.header img#aiopLogo {
+    top: 2rem;
+    left: 2rem;
+  }
+  main.home div.header div#placeholder {
+    width: 100%;
+    height: 100vh;
+    background: url("assets/Placeholder_D.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  main.home div.scroll {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 12;
+    margin-top: -1rem;
+  }
+  main.home div.scroll img {
+    padding: 2rem 1rem;
+  }
+  main.home img.schedule {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-column-end: span 6;
+    width: 50vw;
+    min-width: 600px;
+  }
+  main.home div.schedule {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: span 6;
+    margin-top: 10rem;
+  }
+  main.home div.about {
+    grid-row-start: 4;
+    grid-column-start: 4;
+    grid-column-end: span 8;
+  }
+  main.home img.artists {
+    grid-row-start: 5;
+    grid-column-start: 2;
+    grid-column-end: span 4;
+    width: 35vw;
+    min-width: 350px;
+  }
+  main.home div.artists {
+    grid-row-start: 5;
+    grid-column-start: 5;
+    grid-column-end: span 6;
+    margin-top: 10rem;
+  }
+
+  footer {
+    width: 100%;
+    display: inline-block;
+    padding: 1em;
+  }
+  footer p {
+    margin: 0;
+  }
+  footer .footer-col {
+    align-content: baseline;
+    width: 30%;
+  }
+  footer .footer-col#footer-curator, footer .footer-col#footer-founder {
+    width: 30%;
+  }
+  footer .footer-col#footer-copyright {
+    width: 100%;
+  }
+  footer .social .social-icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: white;
+    color: black;
+    border-radius: 1em;
+  }
+}
+@media screen and (min-width: 1080px) {
+  footer {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  footer p {
+    margin: 0;
+  }
+  footer .footer-col {
+    padding: 1em;
+    align-content: baseline;
+    width: auto;
+  }
+  footer .footer-col#footer-curator, footer .footer-col#footer-founder, footer .footer-col#footer-copyright {
+    width: auto;
+  }
+  footer .footer-col#footer-location {
+    width: 15%;
+  }
+  footer .social .social-icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background: white;
+    color: black;
+    border-radius: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
