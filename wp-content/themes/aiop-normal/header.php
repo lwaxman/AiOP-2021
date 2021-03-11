@@ -23,4 +23,7 @@
 
 	</head>
 	<body>
-		<nav><h3>Full website coming soon!</h3></nav>
+		<a href="<?php echo get_home_url(); ?>">
+			<img src="<?php bloginfo('template_url'); ?>/assets/AiOP2021_classic_rgb_r.png" alt="" id="aiopLogo" alt="Art in Odd Places">
+		</a>
+		<nav><?php wp_nav_menu( array( 'theme_location' => 'top_nav', 'container_class' => 'top_nav' ) ); ?></nav>
