@@ -1,4 +1,18 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#front-page
+ *
+ * @package AiOP_2021
+ * @copyright  AiOP, Laurie Waxman
+ * @since 1.0.0
+ * @version 1.0.0
+ */
+
+get_header();
+
+?>
 
 		<img src="<?php bloginfo('template_url'); ?>/assets/Grid-Home.svg" id="background-grid" alt="grid" class="background-img">		
 		<!-- <canvas id="header"></canvas> -->
