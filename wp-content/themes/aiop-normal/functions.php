@@ -8,8 +8,6 @@
 	add_action( 'init', 'register_top_nav' );
 
 
-	// Load up custom post types
-	add_action('init', 'register_artists');
 		
 	// Add Artists posts type
 	function register_artists(){
@@ -39,5 +37,19 @@
 
 	   	register_post_type( 'artists' , $args );
 	}
+	// Load up custom post types
+	add_action('init', 'register_artists');
+
+
+	// add css & javascript
+	function add_theme_scripts() {
+		wp_enqueue_style('style', get_template_directory_uri().'/css/style.css' );
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('main-js', get_template_directory_uri().'/js/main.js', array('jquery'));
+	}	
+	add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+
+
 
 ?>

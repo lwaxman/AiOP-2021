@@ -6,11 +6,9 @@ Author URI: http://lauriewaxman.com
 Description: The 2021 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Tags: black, art, red, normal
 Text Domain: aiop-normal
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 */
 
 
@@ -27,7 +25,7 @@ body{
 	color: white;
 	padding: 0;
 	margin: 0;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 canvas{
@@ -36,70 +34,37 @@ canvas{
 	height: 100%;
 	border: 2px solid blue;
 	box-sizing: border-box;
-	z-index: -5;
+	z-index: -20;
 	mix-blend-mode: exclusion;
 }
 
-a img#aiopLogo{
-	position: fixed;
-	top: 1.5rem;
-	left: 1.5rem;
-	width: 8rem;
-}
-
-nav{
-	position: fixed;
-	text-align: right;
-	margin-top: 1rem;
-	right: 1rem;
-	z-index: 10;
-	ul{
-		list-style: none;
-		li{
-			display: inline-block;
-			font-size: 1.5rem; 
-			a{	
-				font-family: gopher, 'Prompt', sans-serif;
-				color: white;
-				background: black;
-				text-decoration: none;
-				padding: 3px 16px;
-				border-radius: 2rem;
-				&:hover{
-					background: white;
-					color: black;
-				}	
-				&:focus{
-					border: 2px solid white;
-					background: black;
-					color: white;
-					outline: none;
-				}
-			}
-		}
-	}
-}
-
-h1, h2, h3, h4, p.p1{
+h1, h2, h3, h4, h5, p.p1{
 	font-family: gopher, 'Prompt', sans-serif;
 	line-height: 1em;
+	margin: 0px;
 }
 h1{
 	font-size: 2.5rem;
+	margin-bottom: 0.5em;
 }
 h2{
 	font-size: 2.5rem;
 }
 h3{
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 h4{
-	font-size: 2
+	font-size: 1.5rem;
+	color: $darker-blue;
+}
+h5{
+	font-size: 1.25rem;
+	color: $darker-blue;
 }
 
 p, a{
 	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	&.p1{
 		font-family: gopher, 'Prompt', sans-serif;
 		font-size: 1rem;
@@ -145,6 +110,60 @@ a.button{
 	}
 }
 
+nav{
+	position: fixed;
+	display: block;
+	margin-top: 1rem;
+	z-index: 10;
+	width: 100%;
+	a img#aiopLogo{
+		position: fixed;
+		top: 1.5rem;
+		left: 1.5rem;
+		width: 8rem;
+		z-index: 11;
+	}
+	#menuToggle{
+		width: 3rem;
+		height: 3rem;
+		background: white;
+		border-radius: 2rem;
+		position: fixed;
+		right: 1.5rem;
+		top: 1.5rem;
+
+	}
+	.menu{
+		position: fixed;
+		top: 0;
+		left: 100vw;
+		width: 100%;
+		height: 100vh;
+		transition: left 1s;
+		// background: url('../assets/Menu-Texture.png');
+		// background-size: cover;
+		background: $primary-red;
+
+		ul{
+			list-style: none;
+			padding: 0px;
+			margin: 6rem 0px 0px 0px;
+			border-bottom: 2px solid white;
+			li{
+				border-top: 2px solid white;
+				display: block;
+				font-size: 1.5rem; 
+				padding: 1rem;
+				a{	
+					font-family: gopher, 'Prompt', sans-serif;
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
 img.background-img{
 	position: fixed;
 	mix-blend-mode: hard-light;
@@ -166,7 +185,7 @@ main.home{
 		div#placeholder{
 			width: 100%;
 			height: 100%;
-			background: url("assets/Placeholder_M.png");
+			background: url("../assets/Placeholder_M.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
@@ -192,6 +211,68 @@ main.home{
 		margin-top: -2rem;
 		h2{
 			margin-top: 0px;
+		}
+	}
+}
+
+main.artist-single{
+	position: relative;
+	.header-image{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		img{
+			&.blob{
+				position: absolute;
+				width: 40%;
+				z-index: -5;
+				&.blob-01{
+					align-self: flex-start;
+					left: 2rem;
+				}
+				&.blob-02{
+					align-self: flex-end;
+					right: 2rem;
+				}
+			}
+			&.feature-img{
+				position: relative;
+				width: 100%;
+			}
+		}
+		div.feature-box{
+			z-index: -5;
+			margin: 15% 0;
+			div.feature-shadow{
+				background: linear-gradient(to bottom, transparent, black);
+				opacity: 0.4;
+				margin-top: -8rem;
+				height: 8rem;
+			}
+		}
+	}
+	.header, .project, .bios{
+		width: calc(100% - 4rem);
+		margin: 0 2rem;
+	}
+	.header{
+		margin-top: -18%;
+		.project-title{
+			font-size: 2rem;
+			font-weight: 300;
+		}
+		z-index: 6;
+	}
+	.project h5{
+		// position: relative;
+		margin: 2rem 0 0.5rem 0;
+	}
+	.bios{
+		margin: 6rem 2rem;
+		a{
+			color: $pale-blue;
+			// font-weight: 400;
 		}
 	}
 }
@@ -234,11 +315,12 @@ footer{
 		margin-top: 0.5rem;
 		.social-icon{
 			display: inline-block;
-			width: 2rem;
-			height: 2rem;
 			margin-right: 0.5rem;
-			// color: black;
 			border-radius: 1em;
+			svg{
+				height: 2rem;
+				width: auto;
+			}
 		}
 	} 
 }
@@ -297,7 +379,50 @@ footer{
 		}
 	}
 	nav{
-		right: 2rem;
+		// text-align: right;
+		#menuToggle{
+			display: none;
+		}
+		.menu{
+			// right: 2rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			width: 100%;
+			height: auto;
+			left: 0px;
+			background: none;
+			ul{
+				display: flex;
+				flex-direction: row;
+				border: none;
+				margin: 2rem 2rem 2rem 0;
+				li{
+					display: inline-block;
+					font-size: 1.5rem; 
+					padding: 0px;
+					border: none;
+					a{	
+						font-family: gopher, 'Prompt', sans-serif;
+						color: white;
+						background: black;
+						text-decoration: none;
+						padding: 3px 16px;
+						border-radius: 2rem;
+						&:hover{
+							background: white;
+							color: black;
+						}	
+						&:focus{
+							border: 2px solid white;
+							background: black;
+							color: white;
+							outline: none;
+						}
+					}
+				}
+			}
+		} 
 	}
 
 
@@ -323,7 +448,7 @@ footer{
 			div#placeholder{
 				width: 100%;
 				height: 100vh;
-				background: url("assets/Placeholder_D.png");
+				background: url("../assets/Placeholder_D.png");
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: center;
@@ -331,8 +456,7 @@ footer{
 		}
 		div.scroll{
 			grid-row-start: 2;
-			grid-column-start: 1;
-			grid-column-end: span 12;
+			grid-column: 1/13;
 			margin-top: -1rem;
 			img{
 				padding: 2rem 1rem;
@@ -340,33 +464,28 @@ footer{
 		}
 		img.schedule{	
 			grid-row-start: 3;	
-			grid-column-start: 3; 
-			grid-column-end: span 6;
+			grid-column: 3/9;
 			width: 50vw;
 			min-width: 600px;
 		}
 		div.schedule{
 			grid-row-start: 3;
-			grid-column-start: 2;
-			grid-column-end: span 6;
+			grid-column: 2/8;
 			margin-top: 10rem;
 		}
 		div.about{
 			grid-row-start: 4;
-			grid-column-start: 4;
-			grid-column-end: span 8;
+			grid-column: 4/12;
 		}
 		img.artists{	
 			grid-row-start: 5;		
-			grid-column-start: 2;
-			grid-column-end: span 4;
+			grid-column: 2/6;
 			width: 35vw;
 			min-width: 350px;	
 		}
 		div.artists{
 			grid-row-start: 5;
-			grid-column-start: 5;
-			grid-column-end: span 6;
+			grid-column: 5/11;
 			margin-top: 10rem;
 		}
 	}
@@ -402,9 +521,9 @@ footer{
 			&#footer-web{
 				width: auto;
 			}
-			.social-icon{
-				width: 1.25rem;
+			.social-icon svg{
 				height: 1.25rem;
+				width: auto;
 			}
 
 		}

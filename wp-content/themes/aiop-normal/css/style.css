@@ -6,18 +6,15 @@ Author URI: http://lauriewaxman.com
 Description: The 2021 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Tags: black, art, red, normal
 Text Domain: aiop-normal
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 */
 body {
   background: black;
   color: white;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
 }
 
 canvas {
@@ -26,57 +23,19 @@ canvas {
   height: 100%;
   border: 2px solid blue;
   box-sizing: border-box;
-  z-index: -5;
+  z-index: -20;
   mix-blend-mode: exclusion;
 }
 
-a img#aiopLogo {
-  position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
-  width: 8rem;
-}
-
-nav {
-  position: fixed;
-  text-align: right;
-  margin-top: 1rem;
-  right: 1rem;
-  z-index: 10;
-}
-nav ul {
-  list-style: none;
-}
-nav ul li {
-  display: inline-block;
-  font-size: 1.5rem;
-}
-nav ul li a {
-  font-family: gopher, "Prompt", sans-serif;
-  color: white;
-  background: black;
-  text-decoration: none;
-  padding: 3px 16px;
-  border-radius: 2rem;
-}
-nav ul li a:hover {
-  background: white;
-  color: black;
-}
-nav ul li a:focus {
-  border: 2px solid white;
-  background: black;
-  color: white;
-  outline: none;
-}
-
-h1, h2, h3, h4, p.p1 {
+h1, h2, h3, h4, h5, p.p1 {
   font-family: gopher, "Prompt", sans-serif;
   line-height: 1em;
+  margin: 0px;
 }
 
 h1 {
   font-size: 2.5rem;
+  margin-bottom: 0.5em;
 }
 
 h2 {
@@ -84,16 +43,22 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 h4 {
-  font-size: 2;
+  font-size: 1.5rem;
+  color: #6B98AD;
+}
+
+h5 {
+  font-size: 1.25rem;
+  color: #6B98AD;
 }
 
 p, a {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 p.p1, a.p1 {
   font-family: gopher, "Prompt", sans-serif;
@@ -133,6 +98,56 @@ a.button.secondary:focus {
   outline: none;
 }
 
+nav {
+  position: fixed;
+  display: block;
+  margin-top: 1rem;
+  z-index: 10;
+  width: 100%;
+}
+nav a img#aiopLogo {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 8rem;
+  z-index: 11;
+}
+nav #menuToggle {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 2rem;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+nav .menu {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: 100%;
+  height: 100vh;
+  transition: left 1s;
+  background: #D72027;
+}
+nav .menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 6rem 0px 0px 0px;
+  border-bottom: 2px solid white;
+}
+nav .menu ul li {
+  border-top: 2px solid white;
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+nav .menu ul li a {
+  font-family: gopher, "Prompt", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
 img.background-img {
   position: fixed;
   mix-blend-mode: hard-light;
@@ -156,7 +171,7 @@ main.home .header {
 main.home .header div#placeholder {
   width: 100%;
   height: 100%;
-  background: url("assets/Placeholder_M.png");
+  background: url("../assets/Placeholder_M.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -182,6 +197,64 @@ main.home div:not(:first-child) {
 }
 main.home div:not(:first-child) h2 {
   margin-top: 0px;
+}
+
+main.artist-single {
+  position: relative;
+}
+main.artist-single .header-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+main.artist-single .header-image img.blob {
+  position: absolute;
+  width: 40%;
+  z-index: -5;
+}
+main.artist-single .header-image img.blob.blob-01 {
+  align-self: flex-start;
+  left: 2rem;
+}
+main.artist-single .header-image img.blob.blob-02 {
+  align-self: flex-end;
+  right: 2rem;
+}
+main.artist-single .header-image img.feature-img {
+  position: relative;
+  width: 100%;
+}
+main.artist-single .header-image div.feature-box {
+  z-index: -5;
+  margin: 15% 0;
+}
+main.artist-single .header-image div.feature-box div.feature-shadow {
+  background: linear-gradient(to bottom, transparent, black);
+  opacity: 0.4;
+  margin-top: -8rem;
+  height: 8rem;
+}
+main.artist-single .header, main.artist-single .project, main.artist-single .bios {
+  width: calc(100% - 4rem);
+  margin: 0 2rem;
+}
+main.artist-single .header {
+  margin-top: -18%;
+  z-index: 6;
+}
+main.artist-single .header .project-title {
+  font-size: 2rem;
+  font-weight: 300;
+}
+main.artist-single .project h5 {
+  margin: 2rem 0 0.5rem 0;
+}
+main.artist-single .bios {
+  margin: 6rem 2rem;
+}
+main.artist-single .bios a {
+  color: #D4F2FF;
 }
 
 footer {
@@ -217,10 +290,12 @@ footer .social {
 }
 footer .social .social-icon {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
   margin-right: 0.5rem;
   border-radius: 1em;
+}
+footer .social .social-icon svg {
+  height: 2rem;
+  width: auto;
 }
 
 @media screen and (min-width: 720px) {
@@ -273,8 +348,47 @@ footer .social .social-icon {
     font-style: italic;
   }
 
-  nav {
-    right: 2rem;
+  nav #menuToggle {
+    display: none;
+  }
+  nav .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    left: 0px;
+    background: none;
+  }
+  nav .menu ul {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    margin: 2rem 2rem 2rem 0;
+  }
+  nav .menu ul li {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0px;
+    border: none;
+  }
+  nav .menu ul li a {
+    font-family: gopher, "Prompt", sans-serif;
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 3px 16px;
+    border-radius: 2rem;
+  }
+  nav .menu ul li a:hover {
+    background: white;
+    color: black;
+  }
+  nav .menu ul li a:focus {
+    border: 2px solid white;
+    background: black;
+    color: white;
+    outline: none;
   }
 
   main.home {
@@ -301,15 +415,14 @@ footer .social .social-icon {
   main.home div.header div#placeholder {
     width: 100%;
     height: 100vh;
-    background: url("assets/Placeholder_D.png");
+    background: url("../assets/Placeholder_D.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
   }
   main.home div.scroll {
     grid-row-start: 2;
-    grid-column-start: 1;
-    grid-column-end: span 12;
+    grid-column: 1/13;
     margin-top: -1rem;
   }
   main.home div.scroll img {
@@ -317,33 +430,28 @@ footer .social .social-icon {
   }
   main.home img.schedule {
     grid-row-start: 3;
-    grid-column-start: 3;
-    grid-column-end: span 6;
+    grid-column: 3/9;
     width: 50vw;
     min-width: 600px;
   }
   main.home div.schedule {
     grid-row-start: 3;
-    grid-column-start: 2;
-    grid-column-end: span 6;
+    grid-column: 2/8;
     margin-top: 10rem;
   }
   main.home div.about {
     grid-row-start: 4;
-    grid-column-start: 4;
-    grid-column-end: span 8;
+    grid-column: 4/12;
   }
   main.home img.artists {
     grid-row-start: 5;
-    grid-column-start: 2;
-    grid-column-end: span 4;
+    grid-column: 2/6;
     width: 35vw;
     min-width: 350px;
   }
   main.home div.artists {
     grid-row-start: 5;
-    grid-column-start: 5;
-    grid-column-end: span 6;
+    grid-column: 5/11;
     margin-top: 10rem;
   }
 
@@ -378,9 +486,9 @@ footer .social .social-icon {
   footer .footer-col#footer-curator, footer .footer-col#footer-founder, footer .footer-col#footer-web {
     width: auto;
   }
-  footer .footer-col .social-icon {
-    width: 1.25rem;
+  footer .footer-col .social-icon svg {
     height: 1.25rem;
+    width: auto;
   }
 }
 @media screen and (min-width: 1400px) {
