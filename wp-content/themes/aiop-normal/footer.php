@@ -28,11 +28,11 @@
 
 			<div class="footer-col footer-credit" id="footer-credit">
 				<p>Laurie Waxman</p>
-				<p class="light">Website</p>
+				<p class="light">Website & Design</p>
 			</div>
 			<div class="footer-col footer-copyright" id="footer-copyright">
 				<p>© 2021 Art in Odd Places</p>
-				<p>All Rights Reserved</p>
+				<p>All rights reserved</p>
 			</div>
 
 		</footer>

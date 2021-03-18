@@ -43,7 +43,7 @@
 
 	// add css & javascript
 	function add_theme_scripts() {
-		wp_enqueue_style('style', get_template_directory_uri().'/css/style.css' );
+		wp_enqueue_style('style', get_template_directory_uri().'/style.css' );
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('main-js', get_template_directory_uri().'/js/main.js', array('jquery'));
 	}	

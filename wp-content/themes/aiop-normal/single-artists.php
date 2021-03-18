@@ -48,26 +48,30 @@ get_header();
 
 		    ?> 
 		    <main class="artist-single">		    	
-			    <section class="header-image">
-			    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_01.png" class="blob blob-01" alt="">
-			    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_02.png" class="blob blob-02" alt="">
-			    	<div class="feature-box">
-				    	<img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img" alt="<?php echo esc_attr($project_image['alt']); ?>" />
-				    	<div class="feature-shadow"></div>
+			    <section class="banner">
+			    	<div class="banner-image">
+				    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_01.png" class="blob blob-01" alt="">
+				    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_02.png" class="blob blob-02" alt="">
+				    	<div class="feature-box">
+					    	<img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img" alt="<?php echo esc_attr($project_image['alt']); ?>" />
+					    	<div class="feature-shadow"></div>
+				    	</div>
 			    	</div>
-
-			    </section>
-			    <section class="header">
-					<h1 class="project-artists"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h1>
-					<h2 class="project-title"><?php echo $project_title ?></h2>
-
+				    <div class="banner-text">
+						<h1 class="project-artists"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h1>
+						<h2 class="project-title"><?php echo $project_title ?></h2>
+				    </div>
 			    </section>
 			    <section class="project">
-					<p class="p2 description"><?php echo $project_description ?></p>
+					<p class="p2"><?php echo $project_description ?></p>
+				</section>
+				<section class="schedule">
 			    	<h5>DATE & TIME</h5>
-					<p class="p1 schedule"><?php echo $project_schedule ?></p>
+					<p class="p1"><?php echo $project_schedule ?></p>
+				</section>
+				 <section class="location">
 					<h5>LOCATION</h5>
-					<p class="p1 location"><?php echo $project_location ?></p>
+					<p class="p1"><?php echo $project_location ?></p>
 			    </section>
 			    <section class="bios">
 			    	<?php 
