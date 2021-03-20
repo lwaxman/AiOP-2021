@@ -19,18 +19,30 @@ get_header();
 
    	$artistsArgs = array(
 	    'post_type' => 'artists',
-	    'posts_per_page' => 10
+	    'meta_key' => 'last_name',
+		'orderby' => 'meta_value',
+	    'order'	=> 'ASC',
+	    'posts_per_page' => 100
 	);
 
 	$artistQuery = new WP_Query($artistsArgs);
-	
+
+	// $indents = array(
+	// 	'indent-one', 
+	// 	'indent-two',
+	// 	'indent-three'  
+	// );
+	// $indentThis = $indents[0];
+
+	$last_letter = ' ';
+
 ?>
 
-<div id="primary" class="site-content artists">
-	<div id="content" role="main">
-	    <section class="artistListing">
-	    <h1>ARTISTS</h1>
+<main class="site-content artists artist-listing">
+	    <h1 class="hidden">ARTISTS</h1>
 
+	    <section class="artists">
+		    <span class="h5 page-title">ARTISTS</span>
 		<?php 
 		    if($artistQuery->have_posts()): ?>
 				<?php while($artistQuery->have_posts()): $artistQuery->the_post(); ?>
@@ -43,17 +55,28 @@ get_header();
 						$additional_names 	= get_field('additional_names');
 						$project_title		= get_field('project_title');
 
-					    ?> 
-						<div class="artistContainer">
-							<h3 class="artistTitle"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h3>
-							<p class="p1 artistTitle"><?php echo $project_title ?></p>
-							<a class="artistLink" href="<?php echo the_permalink(); ?>">View Project</a>
+						if( ($last_name[0] != $last_letter) ):
+							echo "<span class='d1 artist-letter'>".$last_name[0]."</span>";
+						endif;
+						$last_letter = $last_name[0];
+						
+						?>
+						<div class="artist-container">
+							<div class="artist-copy">
+								<span class="h3 artist-title">
+									<a href="<?php echo the_permalink(); ?>"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></a>
+								</span>
+								<p class="artist-title">
+									<a href="<?php echo the_permalink(); ?>"><?php echo $project_title ?></a>
+								</p>
+							</div>
+							<a class="artist-arrow" title="view" href="<?php echo the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/Arrow-View.svg" alt="arrow"></a>
+							<!-- <a class="artist-link" href="<">View Project</a> -->
 						</div>
 					<?php endif ?>
 				<?php endwhile ?>
 			<?php endif ?>
-		</section>
-	</div><!-- #content -->
-</div><!-- #primary -->
+	    </section>
+</main><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -40,16 +40,29 @@
 	// Load up custom post types
 	add_action('init', 'register_artists');
 
+	function sort_posts_alpha( $query ) {
+		if ( $query->is_tax('artists') && $query->is_main_query() ) {
+			$query->set( 'orderby', 'title' );
+			$query->set( 'order', 'ASC' );
+		}
+	}
+	add_action( 'pre_get_posts', 'sort_posts_alpha' );
+
 
 	// add css & javascript
 	function add_theme_scripts() {
-		wp_enqueue_style('style', get_template_directory_uri().'/style.css' );
+		wp_enqueue_style('style', get_stylesheet_directory_uri().'/style.css' );
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('main-js', get_template_directory_uri().'/js/main.js', array('jquery'));
 	}	
 	add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
-
-
+	// add css to page templates
+	function add_page_template_scripts() {
+	    if ( is_page_template( 'page-artists.php' ) ) {
+	        wp_enqueue_style( 'style-artistspage', get_stylesheet_directory_uri() . '/style.css' );
+	    }
+	}
+	add_action( 'wp_enqueue_scripts', 'add_page_template_scripts' );
 
 ?>

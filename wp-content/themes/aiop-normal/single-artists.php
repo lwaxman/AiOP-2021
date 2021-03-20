@@ -47,7 +47,8 @@ get_header();
 			$project_image			= get_field('project_image', $thisID);
 
 		    ?> 
-		    <main class="artist-single">		    	
+		    <main class="artist-single">	
+			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h1>	    	
 			    <section class="banner">
 			    	<div class="banner-image">
 				    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_01.png" class="blob blob-01" alt="">
@@ -58,8 +59,8 @@ get_header();
 				    	</div>
 			    	</div>
 				    <div class="banner-text">
-						<h1 class="project-artists"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h1>
-						<h2 class="project-title"><?php echo $project_title ?></h2>
+						<span class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
+						<span class="h2 project-title"><?php echo $project_title ?></span>
 				    </div>
 			    </section>
 			    <section class="project">
@@ -80,19 +81,19 @@ get_header();
 			    			echo "<p>" . $artist_1_bio . "</p>";
 			    		}
 			    		if($artist_1_link){
-			    			echo "<a href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
+			    			echo "<a target='blank' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
 			    		}
 			    		if($artist_2_bio){
 			    			echo "<p>" . $artist_2_bio . "</p>";
 			    		}
 			    		if($artist_2_link){
-			    			echo "<a href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
+			    			echo "<a target='blank' href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
 			    		}
 			    		if($artist_3_bio){
 			    			echo "<p>" . $artist_3_bio . "</p>";
 			    		}
 			    		if($artist_3_link){
-			    			echo "<a href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
+			    			echo "<a target='blank' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
 			    		}
 			    	?>
 			    </section>
