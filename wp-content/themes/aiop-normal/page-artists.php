@@ -27,17 +27,10 @@ get_header();
 
 	$artistQuery = new WP_Query($artistsArgs);
 
-	// $indents = array(
-	// 	'indent-one', 
-	// 	'indent-two',
-	// 	'indent-three'  
-	// );
-	// $indentThis = $indents[0];
-
 	$last_letter = ' ';
 
 ?>
-
+<img src="<?php bloginfo('template_url'); ?>/assets/Grid-Home.svg" id="background-grid" alt="grid" class="background-img">	
 <main class="site-content artists artist-listing">
 	    <h1 class="hidden">ARTISTS</h1>
 
@@ -59,7 +52,7 @@ get_header();
 							echo "<span class='d1 artist-letter'>".$last_name[0]."</span>";
 						endif;
 						$last_letter = $last_name[0];
-						
+
 						?>
 						<div class="artist-container">
 							<div class="artist-copy">

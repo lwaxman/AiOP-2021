@@ -1,12 +1,15 @@
 <?php 
 
-	// custom menu
-	// https://premium.wpmudev.org/blog/add-menus-to-wordpress/
-	function register_top_nav() {
-		register_nav_menu('new-menu',__( 'Top Navigation' ));
+	// custom navigation
+	// https://www.wpbeginner.com/wp-themes/how-to-add-custom-navigation-menus-in-wordpress-3-0-themes/
+	function wpb_custom_new_menu() {
+		register_nav_menus(
+			array(
+				'my-custom-menu' => __( 'Top Navigation' )
+			)
+		);
 	}
-	add_action( 'init', 'register_top_nav' );
-
+	add_action( 'init', 'wpb_custom_new_menu' );
 
 		
 	// Add Artists posts type
@@ -60,7 +63,10 @@
 	// add css to page templates
 	function add_page_template_scripts() {
 	    if ( is_page_template( 'page-artists.php' ) ) {
-	        wp_enqueue_style( 'style-artistspage', get_stylesheet_directory_uri() . '/style.css' );
+	        wp_enqueue_style( 'style-artists-page', get_stylesheet_directory_uri() . '/style.css' );
+	    }
+	    if ( is_page_template( 'page-about.php' ) ) {
+	        wp_enqueue_style( 'style-about-page', get_stylesheet_directory_uri() . '/style.css' );
 	    }
 	}
 	add_action( 'wp_enqueue_scripts', 'add_page_template_scripts' );

@@ -47,12 +47,13 @@ get_header();
 			$project_image			= get_field('project_image', $thisID);
 
 		    ?> 
+    		<img src="<?php bloginfo('template_url'); ?>/assets/Grid-Home.svg" id="background-grid" alt="grid" class="background-img">		
 		    <main class="artist-single">	
 			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h1>	    	
 			    <section class="banner">
 			    	<div class="banner-image">
-				    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_01.png" class="blob blob-01" alt="">
-				    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_02.png" class="blob blob-02" alt="">
+				    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_01.png" class="blob blob-01" role="presentation">
+				    	<img src="<?php bloginfo('template_url'); ?>/assets/Artist_BG_Blob_02.png" class="blob blob-02" role="presentation">
 				    	<div class="feature-box">
 					    	<img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img" alt="<?php echo esc_attr($project_image['alt']); ?>" />
 					    	<div class="feature-shadow"></div>
