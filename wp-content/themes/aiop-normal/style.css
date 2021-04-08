@@ -302,7 +302,7 @@ main.about section.people {
   display: flex;
   flex-direction: column;
   width: calc(100% - 3rem);
-  margin: -4rem 1.5rem 0 1.5rem;
+  margin-bottom: 10rem;
 }
 main.about section.people img.blob-person-1 {
   width: 50%;
@@ -329,7 +329,6 @@ main.about section.people div.staff div.staff_links a {
 }
 main.about section.partners {
   width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 4rem 1.5rem;
 }
 main.about section.partners .partner_images {
   position: relative;
@@ -675,7 +674,7 @@ footer .social .social-icon svg {
 
   main.about {
     top: -2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 16rem;
   }
   main.about section.header {
     height: 100vh;
@@ -712,6 +711,9 @@ footer .social .social-icon svg {
     grid-column: 2/11;
     margin-bottom: 1rem;
   }
+  main.about section.cs div.button {
+    grid-column: 2/4;
+  }
   main.about section.people {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -741,6 +743,9 @@ footer .social .social-icon svg {
   }
   main.about section.people div.staff {
     margin-bottom: 2rem;
+  }
+  main.about section.people div.staff div.staff_links a {
+    font-size: 1rem;
   }
   main.about section.people div.staff.curator {
     grid-column: 2/7;
@@ -773,16 +778,22 @@ footer .social .social-icon svg {
     right: 0;
     top: 1rem;
     width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
   }
   main.about section.partners div.partner_images img.img_popwalk {
     left: 0;
-    top: 1.5rem;
-    height: 30rem;
+    top: 2.5rem;
+    height: auto;
+    width: 60%;
+    max-width: 21rem;
   }
   main.about section.partners div.partner_images img.img_pollinate {
     right: 0;
-    top: -1.5rem;
-    height: 32rem;
+    top: -2.5rem;
+    height: auto;
+    width: 60%;
+    max-width: 21rem;
   }
   main.about section.partners div.partner_text {
     grid-column: 6/12;
@@ -988,16 +999,16 @@ footer .social .social-icon svg {
     color: #6B98AD;
   }
 
-  p, a, span {
+  p, a {
     font-size: 1.5rem;
     font-weight: 300;
   }
-  p.p1, p span.p1, a.p1, a span.p1, span.p1, span span.p1 {
-    font-size: 2.5rem;
+  p.p1, p span.p1, p.p1r, a.p1, a span.p1, a.p1r {
+    font-size: 2rem;
     line-height: 1.25em;
   }
-  p.p2, p span.p2, a.p2, a span.p2, span.p2, span span.p2 {
-    font-size: 2rem;
+  p.p2, p span.p2, p.p2r, a.p2, a span.p2, a.p2r {
+    font-size: 1.5rem;
     line-height: 1.25em;
   }
 

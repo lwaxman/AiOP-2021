@@ -19,6 +19,8 @@ get_header();
 
 ?>
 
+<img src="<?php bloginfo('template_url'); ?>/assets/Grid-Home.svg" id="background-grid" alt="grid" class="background-img">		
+
 <main class="site-content about">
 
     <h1 class="hidden">ABOUT</h1>	

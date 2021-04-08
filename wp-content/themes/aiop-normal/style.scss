@@ -320,7 +320,7 @@ main.about{
 		display: flex;
 		flex-direction: column;
 		width: calc(100% - 3rem);
-		margin: -4rem 1.5rem 0 1.5rem;
+		margin-bottom: 10rem;
 		img{
 			&.blob-person-1{
 				width: 50%;
@@ -351,7 +351,6 @@ main.about{
 	}
 	section.partners{
 		width: calc(100% - 3rem);
-		margin: 4rem 1.5rem 4rem 1.5rem;
 		.partner_images{
 			position: relative;
 			display: block;
@@ -726,7 +725,7 @@ footer{
 
 	main.about{
 		top: -2rem;
-		margin-bottom: 10rem;
+		margin-bottom: 16rem;
 		section.header{
 			height: 100vh;
 			background: url(assets/About_Header-Desktop.png);
@@ -753,6 +752,9 @@ footer{
 			p{
 				grid-column: 2/11;
 				margin-bottom: 1rem;
+			}
+			div.button{
+				grid-column: 2/4;
 			}
 		}
 		section.people{
@@ -781,6 +783,9 @@ footer{
 			}
 			div.staff{
 				margin-bottom: 2rem;
+				div.staff_links a{
+					font-size: 1rem;
+				}
 			}
 			div.staff.curator{
 				grid-column: 2/7;
@@ -808,16 +813,22 @@ footer{
 						right: 0;
 						top: 1rem;
 						width: 100%;
+						max-width: 35rem;
+						margin: 0 auto;
 					}
 					&.img_popwalk{
 						left: 0;
-						top: 1.5rem;
-						height: 30rem;	
+						top: 2.5rem;
+						height: auto;
+						width: 60%;	
+						max-width: 21rem;
 					}
 					&.img_pollinate{
 						right: 0;
-						top: -1.5rem;
-						height: 32rem;	
+						top: -2.5rem;
+						height: auto;	
+						width: 60%;	
+						max-width: 21rem;
 					}
 				}
 			}
@@ -1030,15 +1041,15 @@ footer{
 		font-size: 1.125rem;
 		color: $darker-blue;
 	}
-	p, a, span{
+	p, a{
 		font-size: 1.5rem;
 		font-weight: 300;
-		&.p1, span.p1{
-			font-size: 2.5rem;
+		&.p1, span.p1, &.p1r{
+			font-size: 2rem;
 			line-height: 1.25em;
 		}
-		&.p2, span.p2{
-			font-size: 2rem;
+		&.p2, span.p2, &.p2r{
+			font-size: 1.5rem;
 			line-height: 1.25em;
 		}
 	}
