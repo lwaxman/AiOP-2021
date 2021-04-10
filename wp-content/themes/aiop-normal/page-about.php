@@ -64,7 +64,8 @@ get_header();
 			    		<p class="p1 staff_name">Yasmeen Abdallah</p>
 			    		<p class="staff_title h5">Curatorial Assistant</p>
 			    		<div class="staff_links">
-			    			<a href="http://www.anchovyart.com">website</a>
+			    			<a href="http://yasmeenabdallah.com/">website</a>
+			    			<a href="https://www.instagram.com/86cherrycherry/">instagram</a>
 			    		</div>
 			    	</div>
 			    	<div class="staff">
@@ -86,6 +87,7 @@ get_header();
 			    		<p class="staff_title h5">Founder & Director</p>
 			    		<div class="staff_links">
 			    			<a href="https://edwoodham.com/bio/">website</a>
+			    			<a href="https://www.instagram.com/edwoodham/">instagram</a>
 			    		</div>
 			    	</div>
 		    	</div>
@@ -98,10 +100,11 @@ get_header();
 			    		</div>
 			    	</div>
 			    	<div class="staff">
-			    		<p class="p1 staff_name">Anglea Liao</p>
+			    		<p class="p1 staff_name">Angela Liao</p>
 			    		<p class="staff_title h5">Photography & Video Manager</p>
 			    		<div class="staff_links">
 			    			<a href="http://www.tianqi-liao.com">website</a>
+			    			<a href="https://www.instagram.com/tiann.qi/">instagram</a>
 			    		</div>
 			    	</div>
 			    	<div class="staff">
