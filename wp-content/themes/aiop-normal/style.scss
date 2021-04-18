@@ -413,7 +413,6 @@ main.artist-listing{
 		margin: 4rem 1.5rem 0 1.5rem;
 		span.page-title{
 			color: $secondary-red;
-			font-weight: bold;
 			margin-bottom: 2rem;
 		}
 		span.artist-letter{
@@ -526,6 +525,35 @@ main.artist-single{
 	}
 }
 
+main.partners{
+	width: calc(100% - 3rem);
+	margin: 4rem 1.5rem 0 1.5rem;
+	.page-title{
+		color: $secondary-red;
+		width: 100%;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid $secondary-red;
+		margin-bottom: 2rem;
+	}
+	.partner_images{
+		margin: 1rem 0;
+		img.sreenshot{
+			width: 100%;
+			margin-bottom: -3rem;
+		}
+	}
+	.partner{
+		margin-bottom: 3rem;
+		img.logo{
+			width: 6rem;
+			margin-bottom: 1rem;
+		}
+		p{
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
 footer{
 	background: $secondary-red;
 	padding: 3rem 1.5rem;
@@ -622,7 +650,7 @@ footer{
 			line-height: 1.25em;
 		}
 		&.p2, span.p2, &.p2r{
-			font-size: 1.5rem;
+			font-size: 1.25rem;
 			line-height: 1.25em;
 		}
 		&.light{
@@ -1018,8 +1046,43 @@ footer{
 	 	}
 	}
 
+	main.partners{
+		@include twelve-col-grid;
+		margin: 6rem 0 0 0;
+		grid-template-rows: auto auto auto;
+		.page-title{
+			grid-column: 2/12;
+			grid-row: 1/2;
+		}
+		.partner_images{
+			margin: 0 0 4rem 0;
+			&.popwalk{
+				grid-column: 1/5;
+				grid-row: 2/3;
+			}
+			&.pollinate{
+				grid-column: 9/13;
+				grid-row: 3/4;
+			}
+		}
+		.partner{
+			margin: 0 0 6rem 0;
+			&.popwalk{
+				grid-column: 5/12;
+				grid-row: 2/3;
+			}
+			&.pollinate{
+				grid-column: 2/9;
+				grid-row: 3/4;
+			}
+		}
+	}
+	
+
+
 	footer{
-		@include twelve-col-grid; 
+		@include twelve-col-grid;
+		margin-top: 6rem;
 		p, a{
 			font-size: 1rem;
 		}
@@ -1082,7 +1145,7 @@ footer{
 	}
 	p, a{
 		font-size: 1.5rem;
-		font-weight: 300;
+		font-weight: 200;
 		&.p1, span.p1, &.p1r{
 			font-size: 2rem;
 			line-height: 1.25em;
