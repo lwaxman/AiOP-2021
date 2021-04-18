@@ -532,6 +532,24 @@ main.partners .partner p {
   margin-bottom: 1.5rem;
 }
 
+main.donate {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem;
+}
+main.donate .page-title {
+  color: #AD1F25;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #AD1F25;
+  margin-bottom: 2rem;
+}
+main.donate div.payment-method {
+  margin-top: 2rem;
+}
+main.donate div.payment-method p {
+  margin: 1rem 0;
+}
+
 footer {
   background: #AD1F25;
   padding: 3rem 1.5rem;
@@ -1080,6 +1098,28 @@ footer .social .social-icon svg {
   main.partners .partner.pollinate {
     grid-column: 2/9;
     grid-row: 3/4;
+  }
+
+  main.donate {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+    margin: 6rem 0 0 0;
+  }
+  main.donate .page-title {
+    grid-column: 2/12;
+    grid-row: 1/2;
+  }
+  main.donate div.payment-method {
+    grid-row: 2/3;
+  }
+  main.donate div.payment-method.paypal {
+    grid-column: 2/7;
+  }
+  main.donate div.payment-method.mail {
+    grid-column: 7/12;
   }
 
   footer {

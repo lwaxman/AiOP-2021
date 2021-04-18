@@ -565,6 +565,24 @@ main.partners{
 	}
 }
 
+main.donate{
+	width: calc(100% - 3rem);
+	margin: 4rem 1.5rem;
+	.page-title{
+		color: $secondary-red;
+		width: 100%;
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid $secondary-red;
+		margin-bottom: 2rem;
+	}
+	div.payment-method{
+		margin-top: 2rem;
+		p{
+			margin: 1rem 0;
+		}
+	}
+}
+
 footer{
 	background: $secondary-red;
 	padding: 3rem 1.5rem;
@@ -1115,7 +1133,23 @@ footer{
 		}
 	}
 	
-
+	main.donate{
+		@include twelve-col-grid;
+		margin: 6rem 0 0 0;
+		.page-title{
+			grid-column: 2/12;
+			grid-row: 1/2;
+		}
+		div.payment-method{
+			grid-row: 2/3;
+			&.paypal{
+				grid-column: 2/7;
+			}
+			&.mail{	
+				grid-column: 7/12;
+			}
+		}
+	}
 
 	footer{
 		@include twelve-col-grid;
