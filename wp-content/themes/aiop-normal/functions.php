@@ -5,7 +5,8 @@
 	function wpb_custom_new_menu() {
 		register_nav_menus(
 			array(
-				'my-custom-menu' => __( 'Top Navigation' )
+				'my-custom-menu' => __( 'Top Navigation' ),
+				'my-second-menu' => __( 'Sub Navigation' ),
 			)
 		);
 	}

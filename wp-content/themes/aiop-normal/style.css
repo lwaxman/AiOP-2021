@@ -255,6 +255,19 @@ main.home div h2 {
   margin-bottom: 1em;
 }
 
+section.home-covid {
+  background: #D72027;
+  height: 10rem;
+}
+section.home-covid img {
+  width: calc(100% - 48px);
+  margin: -8rem 1.5rem 0 1.5rem;
+}
+section.home-covid p {
+  width: calc(100% - 48px);
+  margin: 1.5rem;
+}
+
 main.about {
   position: relative;
   top: -3rem;
@@ -518,8 +531,7 @@ footer .social {
 }
 footer .social .social-icon {
   display: inline-block;
-  margin-right: 0.5rem;
-  border-radius: 1em;
+  margin: 0 0.5rem 0.5rem 0;
 }
 footer .social .social-icon svg {
   width: 2rem;
@@ -677,6 +689,35 @@ footer .social .social-icon svg {
     grid-row-start: 5;
     grid-column: 5/11;
     margin-top: 10rem;
+  }
+
+  section.home-covid {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    background: none;
+    grid-template-rows: 6rem auto;
+    padding-bottom: 0;
+  }
+  section.home-covid div.text {
+    grid-column: 1/13;
+    grid-row: 2/2;
+    background: #D72027;
+    padding: 3rem 1.5rem;
+    padding-left: calc(((100% - 224px) / 12) + 40px);
+    z-index: 1;
+  }
+  section.home-covid div.text p {
+    margin: 0;
+    width: 33%;
+  }
+  section.home-covid img {
+    grid-column: 6/13;
+    grid-row: 1/3;
+    align-self: bottom;
+    margin: 0;
+    z-index: 2;
   }
 
   main.about {
@@ -953,13 +994,6 @@ footer .social .social-icon svg {
   footer p, footer a {
     font-size: 1rem;
   }
-  footer #footer-logo {
-    grid-column: 1/2;
-  }
-  footer #footer-logo a img {
-    width: 100%;
-    max-width: 8rem;
-  }
   footer #footer-festival {
     grid-column: 2/4;
   }
@@ -970,14 +1004,14 @@ footer .social .social-icon svg {
     grid-column: 6/8;
   }
   footer #footer-social {
-    grid-column: 9/11;
+    grid-column: 9/10;
   }
   footer #footer-social .social-icon svg {
     width: 1.75rem;
     display: inline-block;
   }
   footer #footer-copyright {
-    grid-column: 11/13;
+    grid-column: 10/12;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1097,23 +1131,6 @@ footer .social .social-icon svg {
   main.artist-single section.bios {
     grid-column: 6/12;
     grid-row: 4/5;
-  }
-
-  footer {
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 1rem;
-  }
-  footer .footer-aiop {
-    grid-column: 1/8;
-    grid-row: 1/2;
-  }
-  footer .footer-credit {
-    grid-column: 9/11;
-    grid-row: 1/2;
-  }
-  footer .footer-copyright {
-    grid-column: 11/13;
-    grid-row: 1/2;
   }
 }
 

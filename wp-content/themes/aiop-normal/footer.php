@@ -1,10 +1,5 @@
 		<footer>
 
-			<div class="footer-col" id="footer-logo">
-				<a href="<?php echo get_home_url(); ?>">
-					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP2021_classic_rgb_r.png" alt="" id="aiopLogo" alt="Art in Odd Places">
-				</a>
-			</div>
 			<div class="footer-col" id="footer-festival">
 				<p>May 14-16 2021</p>
 				<p><span class="light">New York City</span></p>
