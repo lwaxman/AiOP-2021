@@ -26,11 +26,17 @@
 			<a href="<?php echo get_home_url(); ?>">
 				<img src="<?php bloginfo('template_url'); ?>/assets/AiOP2021_classic_rgb_r.png" alt="" id="aiopLogo" alt="Art in Odd Places">
 			</a>
-			<?php 
-			wp_nav_menu( array( 
-				'theme_location' => 'my-custom-menu', 
-				'container_class' => 'menu' 
-			) );
-			?>
+			<div class="menu_container">
+				<?php 
+				wp_nav_menu( array( 
+					'theme_location' => 'my-custom-menu', 
+					'container_class' => 'main-menu' 
+				) );
+				wp_nav_menu( array( 
+					'theme_location' => 'my-second-menu', 
+					'container_class' => 'sub-menu' 
+				) );
+				?>
+			</div>
 			<div id="menuToggle"></div>
 		</nav>

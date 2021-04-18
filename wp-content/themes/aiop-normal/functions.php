@@ -72,6 +72,9 @@
 	    if ( is_page_template( 'page-partners.php' ) ) {
 	        wp_enqueue_style( 'style-partners-page', get_stylesheet_directory_uri() . '/style.css' );
 	    }
+	     if ( is_page_template( 'page-donate.php' ) ) {
+	        wp_enqueue_style( 'style-donate-page', get_stylesheet_directory_uri() . '/style.css' );
+	    }
 	}
 	add_action( 'wp_enqueue_scripts', 'add_page_template_scripts' );
 

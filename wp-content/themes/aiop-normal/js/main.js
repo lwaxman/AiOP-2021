@@ -7,14 +7,14 @@ jQuery(document).ready(function($){
 	$("#menuToggle").on('click', function(event){
 		menuOpen =! menuOpen; 
 		if(menuOpen){
-			console.log("OPEN");
-			$('.menu').css("left", "0px");
+			console.log("OPEN MENU");
+			$('.menu_container').css("left", "0px");
 		}else{
-			console.log("CLOSE");
+			console.log("CLOSE MENU");
 			if(window.innerWidth<=720){ //860
-				$('.menu').css("left", "100vw");
+				$('.menu_container').css("left", "100vw");
 			}else{
-				$('.menu').css("left", "auto");
+				$('.menu_container').css("left", "auto");
 			}
 		}
 	});

@@ -172,28 +172,38 @@ nav #menuToggle {
   right: 1.5rem;
   top: 1.5rem;
 }
-nav .menu {
+nav .menu_container {
   position: fixed;
   top: 0;
   left: 100vw;
   width: 100%;
   height: 100vh;
   transition: left 1s;
-  background: #D72027;
+  padding: 6rem 0px 0px 0px;
+  background: #AD1F25;
 }
-nav .menu ul {
+nav .menu_container .main-menu {
+  background: url("assets/Menu-Texture.png");
+  background-size: cover;
+}
+nav .menu_container .sub-menu {
+  border-bottom: 1px solid white;
+}
+nav .menu_container .sub-menu ul li {
+  font-size: 1rem;
+}
+nav .menu_container ul {
   list-style: none;
+  margin: 0;
   padding: 0px;
-  margin: 6rem 0px 0px 0px;
-  border-bottom: 2px solid white;
 }
-nav .menu ul li {
-  border-top: 2px solid white;
+nav .menu_container ul li {
+  border-top: 1px solid white;
   display: block;
   font-size: 1.5rem;
   padding: 1rem;
 }
-nav .menu ul li a {
+nav .menu_container ul li a {
   text-transform: uppercase;
   font-family: gopher, "Prompt", sans-serif;
   color: white;
@@ -315,6 +325,7 @@ main.about section.people {
   display: flex;
   flex-direction: column;
   width: calc(100% - 3rem);
+  padding: 1.5rem;
   margin-bottom: 10rem;
 }
 main.about section.people img.blob-person-1 {
@@ -342,6 +353,7 @@ main.about section.people div.staff div.staff_links a {
 }
 main.about section.partners {
   width: calc(100% - 3rem);
+  padding: 1.5rem;
 }
 main.about section.partners .partner_images {
   position: relative;
@@ -614,40 +626,62 @@ footer .social .social-icon svg {
   nav #menuToggle {
     display: none;
   }
-  nav .menu {
+  nav .menu_container {
+    width: calc(100% - 3rem);
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    height: auto;
+    left: 0px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  }
+  nav .menu_container .main-menu {
+    width: 100%;
+    background: none;
+  }
+  nav .menu_container .sub-menu {
+    width: 100%;
+    color: #6B98AD;
+    padding: 0;
+    background: none;
+    margin-top: 0.5rem;
+    border: none;
+  }
+  nav .menu_container .sub-menu ul li a {
+    color: #6B98AD;
+    font-size: 1.25rem;
+  }
+  nav .menu_container .sub-menu ul li a:hover {
+    background: #6B98AD;
+    color: white;
+  }
+  nav .menu_container .sub-menu ul li a:focus {
+    border: 2px solid #6B98AD;
+    background: black;
+    color: #6B98AD;
+    outline: none;
+  }
+  nav .menu_container ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 100%;
-    height: auto;
-    left: 0px;
-    background: none;
   }
-  nav .menu ul.menu {
-    display: flex;
-    flex-direction: row;
-    border: none;
-    width: calc(100% - 3rem);
-    margin: 1.5rem;
-  }
-  nav .menu ul.menu li {
+  nav .menu_container ul li {
     display: inline-block;
     font-size: 1.5rem;
     padding: 0px;
     border: none;
   }
-  nav .menu ul.menu li a {
+  nav .menu_container ul li a {
     font-family: gopher, "Prompt", sans-serif;
     color: white;
     text-decoration: none;
     padding: 3px 16px;
     border-radius: 2rem;
   }
-  nav .menu ul.menu li a:hover {
+  nav .menu_container ul li a:hover {
     background: white;
     color: black;
   }
-  nav .menu ul.menu li a:focus {
+  nav .menu_container ul li a:focus {
     border: 2px solid white;
     background: black;
     color: white;
