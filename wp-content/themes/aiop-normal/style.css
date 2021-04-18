@@ -166,8 +166,8 @@ nav a img#aiopLogo {
 nav #menuToggle {
   width: 3rem;
   height: 3rem;
-  background: white;
-  border-radius: 2rem;
+  background: url(assets/Menu-Icon.svg);
+  background-size: contain;
   position: fixed;
   right: 1.5rem;
   top: 1.5rem;
@@ -440,6 +440,7 @@ main.artist-single section.banner div.banner-image div.feature-box {
   padding-top: 56.25%;
   overflow: hidden;
   position: relative;
+  background: #210542;
 }
 main.artist-single section.banner div.banner-image div.feature-box img {
   width: 100%;
@@ -480,11 +481,14 @@ main.artist-single section.bios a {
 
 footer {
   background: #AD1F25;
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
 }
 footer p {
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   font-weight: 500;
+}
+footer p span.light, footer p span.light a {
+  font-weight: 300;
 }
 footer a {
   font-weight: 500;
@@ -496,6 +500,9 @@ footer a svg path {
 footer a:hover svg path {
   fill: #D4F2FF;
 }
+footer a img {
+  width: 8rem;
+}
 footer .footer-col {
   margin-bottom: 1rem;
   width: 100%;
@@ -503,8 +510,8 @@ footer .footer-col {
   display: inline-block;
   vertical-align: top;
 }
-footer .footer-col#footer-curator, footer .footer-col#footer-founder {
-  width: 48%;
+footer .footer-col#footer-people p a {
+  text-decoration: none;
 }
 footer .social {
   margin-top: 0.5rem;
@@ -515,8 +522,8 @@ footer .social .social-icon {
   border-radius: 1em;
 }
 footer .social .social-icon svg {
-  height: 2rem;
-  width: auto;
+  width: 2rem;
+  height: auto;
 }
 
 @media screen and (min-width: 720px) {
@@ -938,38 +945,39 @@ footer .social .social-icon svg {
 
   footer {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
-    column-gap: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
   }
   footer p, footer a {
     font-size: 1rem;
   }
-  footer .footer-aiop {
-    grid-column: 1/6;
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 2rem;
+  footer #footer-logo {
+    grid-column: 1/2;
   }
-  footer .footer-credit {
+  footer #footer-logo a img {
+    width: 100%;
+    max-width: 8rem;
+  }
+  footer #footer-festival {
     grid-column: 2/4;
-    grid-row: 2/3;
   }
-  footer .footer-copyright {
-    grid-column: 5/7;
-    grid-row: 2/3;
+  footer #footer-people {
+    grid-column: 4/6;
   }
-  footer .footer-col {
-    width: auto;
+  footer #footer-contact {
+    grid-column: 6/8;
+  }
+  footer #footer-social {
+    grid-column: 9/11;
+  }
+  footer #footer-social .social-icon svg {
+    width: 1.75rem;
     display: inline-block;
   }
-  footer .footer-col#footer-curator, footer .footer-col#footer-founder, footer .footer-col#footer-web {
-    width: auto;
-  }
-  footer .footer-col .social-icon svg {
-    height: 1.25rem;
-    width: auto;
+  footer #footer-copyright {
+    grid-column: 11/13;
   }
 }
 @media screen and (min-width: 1400px) {

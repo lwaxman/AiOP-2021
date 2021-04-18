@@ -180,8 +180,9 @@ nav{
 	#menuToggle{
 		width: 3rem;
 		height: 3rem;
-		background: white;
-		border-radius: 2rem;
+		background: url(assets/Menu-Icon.svg);
+		background-size: contain;
+		// border-radius: 2rem;
 		position: fixed;
 		right: 1.5rem;
 		top: 1.5rem;
@@ -467,6 +468,7 @@ main.artist-single{
 				padding-top: 56.25%;
 				overflow: hidden;
 				position: relative;
+				background: $aiop-purple;
 				img{
 					width: 100%;
 					height: auto;
@@ -513,10 +515,13 @@ main.artist-single{
 
 footer{
 	background: $secondary-red;
-	padding: 1.5rem;
+	padding: 3rem 1.5rem;
 	p{
-		margin: 0;
+		margin: 0 0 0.5rem 0;
 		font-weight: 500;
+		span.light, span.light a{
+			font-weight: 300;
+		}
 	}
 	a{
 		font-weight: 500;
@@ -529,22 +534,24 @@ footer{
 				fill: $pale-blue;
 			} 
 		}
+		img{
+			width: 8rem;
+		}
 	}
+
 	.footer-col{
 		margin-bottom: 1rem;
 		width: 100%;
-
 		font-weight: 600;
 		display: inline-block;
 		vertical-align: top;
-		&#footer-curator, 
-		&#footer-founder{
-			width: 48%;
-		}
-		&#footer-web{
-
+		&#footer-people p a{
+			text-decoration: none;
 		}
 	}
+	
+		
+
 	.social{
 		margin-top: 0.5rem;
 		.social-icon{
@@ -552,8 +559,8 @@ footer{
 			margin-right: 0.5rem;
 			border-radius: 1em;
 			svg{
-				height: 2rem;
-				width: auto;
+				width: 2rem;
+				height: auto;
 			}
 		}
 	} 
@@ -972,42 +979,41 @@ footer{
 	}
 
 	footer{
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(2, auto);
-		column-gap: 2rem; 
+		@include twelve-col-grid; 
 		p, a{
 			font-size: 1rem;
 		}
-		.footer-aiop{
-			grid-column: 1/6;
-			grid-row: 1/2;
-			display: grid;
-			grid-template-columns: repeat(5, 1fr);
-			column-gap: 2rem; 
+		#footer-logo{
+			grid-column: 1/2;
+			a img{
+				width: 100%;
+				max-width: 8rem;
+			}
 		}
-		.footer-credit{
+		#footer-festival{
 			grid-column: 2/4;
-			grid-row: 2/3;
 		}
-		.footer-copyright{
-			grid-column: 5/7;
-			grid-row: 2/3;
+		#footer-people{
+			grid-column: 4/6;
 		}
-		.footer-col{
-			width: auto;
-			display: inline-block;
-			&#footer-curator, 
-			&#footer-founder,
-			&#footer-web{
-				width: auto;
-			}
+		#footer-contact{
+			grid-column: 6/8;
+		}
+		#footer-social{
+			grid-column: 9/11;
 			.social-icon svg{
-				height: 1.25rem;
-				width: auto;
+				width: 1.75rem;
+				display: inline-block;
 			}
-
 		}
+		#footer-copyright{
+			grid-column: 11/13;
+		}
+		// .footer-col{
+		// 	width: auto;
+		// 	display: inline-block;
+
+		// }
 	}
 
 }
