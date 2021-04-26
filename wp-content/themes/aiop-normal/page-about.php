@@ -169,14 +169,18 @@ get_header();
 				    	<img src="<?php bloginfo('template_url'); ?>/assets/Partners_popwalk-logo.png" alt="Popwalk logo">
 				    	<p class="h3">Popwalk</p>
 						<p><?php the_field('about_popwalk'); ?></p>
-						<a href="http://www.popwalkapp.com/" class="button secondary">View website</a>
+						<!-- <a href="http://www.popwalkapp.com/" class="button secondary">View website</a> -->
 			    	</div>
 			    	<div class="partner pollinate">
 			    		<img src="<?php bloginfo('template_url'); ?>/assets/Partners_pollinate-logomark.png" alt="Pollinate logo">
 				    	<p class="h3">Pollinate</p>
 						<p><?php the_field('about_pollinate'); ?></p>
-						<a href="https://www.pollinate.co/" class="button secondary">View website</a>
+						<!-- <a href="https://www.pollinate.co/" class="button secondary">View website</a> -->
 			    	</div>
+			    	<div class="read-more">
+						<a href="<?php echo get_home_url().'/partners'; ?>" class="button primary">Read more</a>
+			    	</div>
+
 		    	</div>
 		    </section>
     	</section>

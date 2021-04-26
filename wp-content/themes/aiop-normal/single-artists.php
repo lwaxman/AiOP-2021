@@ -24,6 +24,22 @@ get_header();
 	    'posts_per_page' => 1
 	);
 	$artistQuery = new WP_Query($args);
+
+	$all_posts = new WP_Query(array(
+		'post_type' => 'artists',
+	    'meta_key' => 'last_name',
+		'orderby' => 'meta_value',
+        'order' => 'ASC',
+        'posts_per_page' => -1
+    ));
+
+    foreach($all_posts->posts as $key => $value) {
+        if($value->ID == $post->ID){
+            $nextID = $all_posts->posts[$key + 1]->ID;
+            $prevID = $all_posts->posts[$key - 1]->ID;
+            break;
+        }
+    }
 ?>
 
 <?php while($artistQuery->have_posts()): $artistQuery->the_post(); ?>
@@ -45,6 +61,9 @@ get_header();
 			$artist_3_link			= get_field('artist_3_weblink', $thisID);
 			$artist_3_link			= get_field('artist_3_weblink', $thisID);
 			$project_image			= get_field('project_image', $thisID);
+
+
+
 
 		    ?> 
     		<img src="<?php bloginfo('template_url'); ?>/assets/Grid-Home.svg" id="background-grid" alt="grid" class="background-img">		
@@ -97,6 +116,19 @@ get_header();
 			    			echo "<a target='blank' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
 			    		}
 			    	?>
+			    </section>
+			    <section class="artist-nav">
+			    	
+			    	<?php if($prevID): ?>
+					    <div class="arrow prev">
+			    	        <a href="<?= get_the_permalink($prevID) ?>" rel="prev"><img src="<?php bloginfo('template_url'); ?>/assets/Arrow-Previous.png"><span> </span></a>
+					    </div>
+			    	<?php endif; ?>
+			    	<?php if($nextID): ?>
+			    		<div class="arrow next">
+			    	        <a href="<?= get_the_permalink($nextID) ?>" rel="next"><span> </span><img src="<?php bloginfo('template_url'); ?>/assets/Arrow-Next.png"></a>
+		    	    	</div>
+			    	<?php endif; ?>
 			    </section>
 		    </main>
 	<?php endif ?>

@@ -17,6 +17,7 @@ $pale-blue: #D4F2FF;
 $darker-blue: #6B98AD;
 $aiop-purple: #210542;
 $grey: #212326;
+$grey-2: #2b2d31;
 $white: #fff;
 $primary-type: gopher, 'Prompt', sans-serif;
 $secondary-type: Roboto, sans-serif;
@@ -432,6 +433,9 @@ main.about{
 				}
 			}
 		}
+		.read-more{
+			margin-top: 2rem;
+		}
 	}
 }
 
@@ -464,6 +468,7 @@ main.artist-listing{
 				&.artist-arrow img{
 					margin-top: .5rem;
 				}
+				
 			}
 		}
 	}
@@ -549,6 +554,42 @@ main.artist-single{
 		}
 		a{
 			color: $pale-blue;
+		}
+	}
+	section.artist-nav{
+		height: auto;
+		padding-bottom: 4rem;
+		.arrow{
+			width: calc(50% - 3rem);
+			padding: 1.5rem;
+			display: inline-block;
+			a{
+				color: $pale-blue;
+				text-decoration: none;
+				&:visited{
+					color: $pale-blue;
+					text-decoration: none;
+				}
+			}
+			&.prev{
+				float: left;
+				background: $grey-2;
+				a span:after{
+					content: "PREVIOUS";
+					color: $pale-blue;
+					font-family: $secondary-type;
+				}
+			}
+			&.next{
+				float: right;
+				text-align: right;
+				background: $grey;
+				a span:before{
+					content: "NEXT";
+					color: $pale-blue;
+					font-family: $secondary-type;
+				}
+			}
 		}
 	}
 }
@@ -1020,6 +1061,10 @@ footer{
 					}
 				}
 			}
+			.read-more{
+				grid-column: 1/6;
+				// display: inline-block;
+			}
 		}
 	}
 
@@ -1074,8 +1119,11 @@ footer{
 						margin-left: 1rem;
 					}
 				}
+
+
 			}
 		}
+
 	}
 
 	main.artist-single{
@@ -1136,6 +1184,41 @@ footer{
 	 			}
 	 		}
 	 	}
+	 	section.artist-nav{
+			position: fixed;
+			padding-bottom: 0rem;
+			width: calc(100% + 3rem);
+			margin-left: -1.5rem;
+			top: 50%;
+			.arrow{	
+				width: auto;
+				padding: 3rem 1.5rem;
+				&.prev{
+					background: none;
+					border-top: 1px solid $pale-blue;
+					border-right: 1px solid $pale-blue;
+					border-bottom: 1px solid $pale-blue;
+					border-top-right-radius: 4rem;
+					border-bottom-right-radius: 4rem;
+					a span:after{
+						content: "";	
+					}
+				}
+				&.next{
+					background: none;
+					border-top: 1px solid $pale-blue;
+					border-left: 1px solid $pale-blue;
+					border-bottom: 1px solid $pale-blue;
+					border-top-left-radius: 4rem;
+					border-bottom-left-radius: 4rem;
+					position: absolute;
+					right: 3rem;
+					a span:before{
+						content: "";	
+					}
+				}
+			}
+		}
 	}
 
 	main.partners{

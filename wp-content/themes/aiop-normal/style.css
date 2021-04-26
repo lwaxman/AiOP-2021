@@ -409,6 +409,9 @@ main.about section.partners .partner p {
 main.about section.partners .partner p.h3 {
   font-weight: bold;
 }
+main.about section.partners .read-more {
+  margin-top: 2rem;
+}
 
 main.artist-listing section.artists {
   width: calc(100% - 3rem);
@@ -517,6 +520,42 @@ main.artist-single section.bios p {
 }
 main.artist-single section.bios a {
   color: #D4F2FF;
+}
+main.artist-single section.artist-nav {
+  height: auto;
+  padding-bottom: 4rem;
+}
+main.artist-single section.artist-nav .arrow {
+  width: calc(50% - 3rem);
+  padding: 1.5rem;
+  display: inline-block;
+}
+main.artist-single section.artist-nav .arrow a {
+  color: #D4F2FF;
+  text-decoration: none;
+}
+main.artist-single section.artist-nav .arrow a:visited {
+  color: #D4F2FF;
+  text-decoration: none;
+}
+main.artist-single section.artist-nav .arrow.prev {
+  float: left;
+  background: #2b2d31;
+}
+main.artist-single section.artist-nav .arrow.prev a span:after {
+  content: "PREVIOUS";
+  color: #D4F2FF;
+  font-family: Roboto, sans-serif;
+}
+main.artist-single section.artist-nav .arrow.next {
+  float: right;
+  text-align: right;
+  background: #212326;
+}
+main.artist-single section.artist-nav .arrow.next a span:before {
+  content: "NEXT";
+  color: #D4F2FF;
+  font-family: Roboto, sans-serif;
 }
 
 main.partners {
@@ -981,6 +1020,9 @@ footer .social .social-icon svg {
   main.about section.partners div.partner_text .partner.pollinate {
     grid-column: 4/7;
   }
+  main.about section.partners .read-more {
+    grid-column: 1/6;
+  }
 
   main.artist-listing {
     margin-top: 6rem;
@@ -1101,6 +1143,41 @@ footer .social .social-icon svg {
   }
   main.artist-single section.bios p:not(:first-child) {
     margin-top: 3rem;
+  }
+  main.artist-single section.artist-nav {
+    position: fixed;
+    padding-bottom: 0rem;
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    top: 50%;
+  }
+  main.artist-single section.artist-nav .arrow {
+    width: auto;
+    padding: 3rem 1.5rem;
+  }
+  main.artist-single section.artist-nav .arrow.prev {
+    background: none;
+    border-top: 1px solid #D4F2FF;
+    border-right: 1px solid #D4F2FF;
+    border-bottom: 1px solid #D4F2FF;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+  }
+  main.artist-single section.artist-nav .arrow.prev a span:after {
+    content: "";
+  }
+  main.artist-single section.artist-nav .arrow.next {
+    background: none;
+    border-top: 1px solid #D4F2FF;
+    border-left: 1px solid #D4F2FF;
+    border-bottom: 1px solid #D4F2FF;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    position: absolute;
+    right: 3rem;
+  }
+  main.artist-single section.artist-nav .arrow.next a span:before {
+    content: "";
   }
 
   main.partners {
