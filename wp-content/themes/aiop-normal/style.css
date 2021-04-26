@@ -1147,37 +1147,51 @@ footer .social .social-icon svg {
   main.artist-single section.artist-nav {
     position: fixed;
     padding-bottom: 0rem;
-    width: calc(100% + 3rem);
+    width: calc(100%);
     margin-left: -1.5rem;
-    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    top: 45%;
   }
   main.artist-single section.artist-nav .arrow {
+    background: none;
     width: auto;
-    padding: 3rem 1.5rem;
+    padding: 0;
   }
   main.artist-single section.artist-nav .arrow.prev {
     background: none;
+  }
+  main.artist-single section.artist-nav .arrow.prev a {
+    transition: all 100ms ease-in-out;
     border-top: 1px solid #D4F2FF;
     border-right: 1px solid #D4F2FF;
     border-bottom: 1px solid #D4F2FF;
     border-top-right-radius: 4rem;
     border-bottom-right-radius: 4rem;
+    padding: 3rem 1.5rem;
   }
   main.artist-single section.artist-nav .arrow.prev a span:after {
     content: "";
   }
   main.artist-single section.artist-nav .arrow.next {
     background: none;
+    float: none;
+  }
+  main.artist-single section.artist-nav .arrow.next a {
+    transition: all 100ms ease-in-out;
     border-top: 1px solid #D4F2FF;
     border-left: 1px solid #D4F2FF;
     border-bottom: 1px solid #D4F2FF;
     border-top-left-radius: 4rem;
     border-bottom-left-radius: 4rem;
-    position: absolute;
-    right: 3rem;
+    padding: 3rem 1.5rem;
   }
   main.artist-single section.artist-nav .arrow.next a span:before {
     content: "";
+  }
+  main.artist-single section.artist-nav .arrow:hover a {
+    background: #212326;
+    padding: 3rem 1.75rem;
   }
 
   main.partners {
