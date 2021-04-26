@@ -26,7 +26,7 @@ get_header();
     <h1 class="hidden">PARTNERS</h1>	
 
     <?php while ( have_posts() ) : the_post(); ?>
-    	 <span class="h5 page-title">PARTNERS</span>
+    	 <!-- <span class="h5 page-title">PARTNERS</span> -->
 
     	<div class="partner_images popwalk">
     		<img src="<?php bloginfo('template_url'); ?>/assets/Partners-Mockup_Popwalk-2.png" alt="Popwalk app sreenshot" class="sreenshot img_popwalk">

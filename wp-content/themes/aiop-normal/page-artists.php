@@ -35,7 +35,7 @@ get_header();
 	    <h1 class="hidden">ARTISTS</h1>
 
 	    <section class="artists">
-		    <span class="h5 page-title">ARTISTS</span>
+		    <!-- <span class="h5 page-title">ARTISTS</span> -->
 		<?php 
 		    if($artistQuery->have_posts()): ?>
 				<?php while($artistQuery->have_posts()): $artistQuery->the_post(); ?>

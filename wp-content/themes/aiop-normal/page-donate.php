@@ -26,7 +26,7 @@ get_header();
     <h1 class="hidden">DONATE</h1>	
 
     <?php while ( have_posts() ) : the_post(); ?>
-    	<span class="h5 page-title">DONATE</span>
+    	<!-- <span class="h5 page-title">DONATE</span> -->
 
         <div class="payment-method paypal">
             <h2>PayPal</h2>

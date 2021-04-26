@@ -16,7 +16,7 @@ $secondary-red: #AD1F25;
 $pale-blue: #D4F2FF;
 $darker-blue: #6B98AD;
 $aiop-purple: #210542;
-$grey: #212626;
+$grey: #212326;
 $white: #fff;
 $primary-type: gopher, 'Prompt', sans-serif;
 $secondary-type: Roboto, sans-serif;
@@ -300,6 +300,7 @@ section.home-covid{
 main.about{
 	position: relative;
 	top: -3rem;
+
 	section.header{
 		width: 100vw; 
 		height: 85vh;
@@ -339,12 +340,28 @@ main.about{
 			transition: max-height 1s ease-out;
 		}
 	}
+	section.festival{
+		display: flex;
+		flex-direction: column;
+		width: calc(100% - 3rem);
+		padding: 4rem 1.5rem 4rem 1.5rem;
+		background: $grey;
+		h3{
+			margin-bottom: 1rem;
+		}
+		.history{
+			margin-bottom: 2rem;
+		}
+	}
 	section.people{
 		display: flex;
 		flex-direction: column;
 		width: calc(100% - 3rem);
 		padding: 1.5rem;
-		margin-bottom: 10rem;
+		margin-bottom: 4rem;
+		h2{
+			margin-bottom: 1rem;
+		}
 		img{
 			&.blob-person-1{
 				width: 50%;
@@ -756,6 +773,14 @@ footer{
 							outline: none;
 						}
 					}
+					&.highlight a{
+						background: $secondary-red;
+						color: white;
+						&:hover{
+							background: white;
+							color: black;
+						}	
+					}
 				}
 			}
 		} 
@@ -885,6 +910,18 @@ footer{
 			}
 			div.button{
 				grid-column: 2/4;
+			}
+		}
+		section.festival{
+			@include twelve-col-grid;
+			padding: 6rem 1.5rem;
+			// background: $grey;
+			.mission{
+				grid-column: 2/7;
+			}
+			.history{
+				grid-column: 7/12;
+				margin: 0;
 			}
 		}
 		section.people{
@@ -1135,7 +1172,7 @@ footer{
 	
 	main.donate{
 		@include twelve-col-grid;
-		margin: 6rem 0 0 0;
+		margin: 6rem 0 6rem 0;
 		.page-title{
 			grid-column: 2/12;
 			grid-row: 1/2;
@@ -1153,7 +1190,6 @@ footer{
 
 	footer{
 		@include twelve-col-grid;
-		margin-top: 6rem;
 		p, a{
 			font-size: 1rem;
 		}
@@ -1227,6 +1263,9 @@ footer{
 		}
 	}
 	main.about{
+		section.festival{
+			padding: 10rem 1.5rem;
+		}
 		section.people{
 			@include twelve-col-grid;
 			margin-top: -8rem;

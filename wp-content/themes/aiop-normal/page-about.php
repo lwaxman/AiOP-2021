@@ -48,6 +48,17 @@ get_header();
 				<div class="button primary" id="cs_read_more"><p>Read more</p></div>	
 		    </section>
 
+		    <section class="festival">
+		    	<div class="mission">
+		    		<h3>Mission</h3>
+		    		<p class="p2r"><span class="italic">Art in Odd Places</span> aims to stretch the boundaries of communication in the public realm by presenting artworks in all disciplines outside the confines of traditional public space regulations. <span class="italic">AiOP</span> reminds us that public spaces function as the epicenter for diverse social interactions and the unfettered exchange of ideas.</p>
+		    	</div>
+		    	<div class="history">
+		    		<h3>History</h3>
+					<p class="p2r"><span class="italic">Art in Odd Places (AiOP)</span> began as an action by a group of artists led by Ed Woodham to encourage local participation in the Cultural Olympiad of the 1996 Olympics in Atlanta. In 2005, after moving back to New York City, he re imagined it as a response to the dwindling of public space and personal civil liberties – first in the Lower East Side and East Village, and since 2008, on 14th Street in Manhattan. <span class="italic">AiOP</span> has always been a grassroots project fueled by the goodwill and inventiveness of its participants.</p>
+		    	</div>
+		    </section>
+
 		    <section class="people">
 		    	<img src="<?php bloginfo('template_url'); ?>/assets/About_People-Blob-1.png" class="blob-person-1" role="presentation">
 		    	<img src="<?php bloginfo('template_url'); ?>/assets/About_People-Blob-2.png" class="blob-person-2" role="presentation">

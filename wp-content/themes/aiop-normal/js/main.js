@@ -7,10 +7,10 @@ jQuery(document).ready(function($){
 	$("#menuToggle").on('click', function(event){
 		menuOpen =! menuOpen; 
 		if(menuOpen){
-			console.log("OPEN MENU");
+			// console.log("OPEN MENU");
 			$('.menu_container').css("left", "0px");
 		}else{
-			console.log("CLOSE MENU");
+			// console.log("CLOSE MENU");
 			if(window.innerWidth<=720){ //860
 				$('.menu_container').css("left", "100vw");
 			}else{
@@ -35,7 +35,7 @@ jQuery(document).ready(function($){
 		}
 	});
 	if(window.innerWidth>720){
-		console.log("BIGGER THAN 720");
+		// console.log("BIGGER THAN 720");
 		$("#cs_read_more").css("display", "none");
 		$('.cs_more_text').css("max-height", "1920px");			
 	}

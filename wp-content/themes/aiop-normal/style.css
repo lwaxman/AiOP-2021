@@ -321,12 +321,28 @@ main.about section.cs .cs_more_text {
   overflow: hidden;
   transition: max-height 1s ease-out;
 }
+main.about section.festival {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 3rem);
+  padding: 4rem 1.5rem 4rem 1.5rem;
+  background: #212326;
+}
+main.about section.festival h3 {
+  margin-bottom: 1rem;
+}
+main.about section.festival .history {
+  margin-bottom: 2rem;
+}
 main.about section.people {
   display: flex;
   flex-direction: column;
   width: calc(100% - 3rem);
   padding: 1.5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
+}
+main.about section.people h2 {
+  margin-bottom: 1rem;
 }
 main.about section.people img.blob-person-1 {
   width: 50%;
@@ -405,7 +421,7 @@ main.artist-listing section.artists span.page-title {
 main.artist-listing section.artists span.artist-letter {
   font-size: 4rem;
   font-weight: bold;
-  color: #212626;
+  color: #212326;
 }
 main.artist-listing section.artists .artist-container {
   border-top: 1px solid #AD1F25;
@@ -705,6 +721,14 @@ footer .social .social-icon svg {
     color: white;
     outline: none;
   }
+  nav .menu_container ul li.highlight a {
+    background: #AD1F25;
+    color: white;
+  }
+  nav .menu_container ul li.highlight a:hover {
+    background: white;
+    color: black;
+  }
 
   main.home {
     display: grid;
@@ -841,6 +865,21 @@ footer .social .social-icon svg {
   }
   main.about section.cs div.button {
     grid-column: 2/4;
+  }
+  main.about section.festival {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+    padding: 6rem 1.5rem;
+  }
+  main.about section.festival .mission {
+    grid-column: 2/7;
+  }
+  main.about section.festival .history {
+    grid-column: 7/12;
+    margin: 0;
   }
   main.about section.people {
     display: grid;
@@ -1106,7 +1145,7 @@ footer .social .social-icon svg {
     column-gap: 1rem;
     width: calc(100% - 3rem);
     padding: 1.5rem;
-    margin: 6rem 0 0 0;
+    margin: 6rem 0 6rem 0;
   }
   main.donate .page-title {
     grid-column: 2/12;
@@ -1128,7 +1167,6 @@ footer .social .social-icon svg {
     column-gap: 1rem;
     width: calc(100% - 3rem);
     padding: 1.5rem;
-    margin-top: 6rem;
   }
   footer p, footer a {
     font-size: 1rem;
@@ -1193,6 +1231,9 @@ footer .social .social-icon svg {
     line-height: 1.25em;
   }
 
+  main.about section.festival {
+    padding: 10rem 1.5rem;
+  }
   main.about section.people {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

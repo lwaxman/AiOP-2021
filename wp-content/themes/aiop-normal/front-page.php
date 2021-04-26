@@ -30,7 +30,7 @@ get_header();
 			</div>
 			<div class="about">
 				<p class="p1">Curated by Furusho von Puttkammer, <span class="italic">AiOP 2021: NORMAL</span> will present artists who seek to critique the mythos of the American Dream and the history of American politics.</p>
-				<a class="button primary" href="<?php bloginfo('template_url'); ?>/about">More about it</a>
+				<a class="button primary" href="<?php bloginfo('template_url'); ?>/about">Read more</a>
 			</div>
 			<img class="artists" src="<?php bloginfo('template_url'); ?>/assets/Blob-62.png" alt="62">
 			<div class="artists">
