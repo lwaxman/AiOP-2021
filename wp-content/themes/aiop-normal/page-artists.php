@@ -57,13 +57,14 @@ get_header();
 						<div class="artist-container">
 							<div class="artist-copy">
 								<span class="h3 artist-title">
-									<a href="<?php echo the_permalink(); ?>"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></a>
+									<?php echo $first_name . " " . $last_name . " " . $additional_names ?>
 								</span>
 								<p class="artist-title">
-									<a href="<?php echo the_permalink(); ?>"><?php echo $project_title ?></a>
+									<?php echo $project_title ?>
 								</p>
+								<!-- <a href="<?php echo $article_link ?>" class="button inline">Read more</a> -->
+								<a class="button inline" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $additional_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 							</div>
-							<a class="artist-arrow" title="view" href="<?php echo the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/Arrow-View.svg" alt="arrow"></a>
 							<!-- <a class="artist-link" href="<">View Project</a> -->
 						</div>
 					<?php endif ?>

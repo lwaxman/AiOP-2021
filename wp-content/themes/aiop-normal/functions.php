@@ -44,6 +44,36 @@
 	// Load up custom post types
 	add_action('init', 'register_artists');
 
+	function register_press(){
+	    $args = array(
+	        'label' => __('Press'),
+	       	'singular_label' => __('Press-Link'),
+	       	'public' => true,
+	       	'show_ui' => true,
+	       	'capability_type' => 'post',
+	       	'taxonomies' => array('category'), 
+	       	'hierarchical' => true,
+			'rewrite' => array("slug" => "press",'with_front' => true), // Permalinks format
+			'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail'),
+			'add_new' => __( 'Add New Press-Link' ),
+			'add_new_item' => __( 'Add New Press-Link' ),
+			'edit' => __( 'Edit Press-Link' ),
+			'edit_item' => __( 'Edit Press-Link' ),
+			'new_item' => __( 'New Press-Link' ),
+			'view' => __( 'View Press-Link' ),
+			'view_item' => __( 'View Press-Link' ),
+			'search_items' => __( 'Search Press' ),
+			'not_found' => __( 'No press-link found' ),
+			'not_found_in_trash' => __( 'No press-link found in Trash' ),
+			'parent' => __( 'Parent Info' ),
+			'menu_position' =>__( 20 ),
+	       );
+
+	   	register_post_type( 'press' , $args );
+	}
+	// Load up custom post types
+	add_action('init', 'register_press');
+
 	function sort_posts_alpha( $query ) {
 		if ( $query->is_tax('artists') && $query->is_main_query() ) {
 			$query->set( 'orderby', 'title' );
