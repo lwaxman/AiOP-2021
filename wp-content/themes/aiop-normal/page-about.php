@@ -107,7 +107,8 @@ get_header();
 			    		<p class="p1 staff_name">Clara Grusq</p>
 			    		<p class="staff_title h5">Curatorial Manager</p>
 			    		<div class="staff_links">
-			    			<a href="https://claragrusq.squarespace.com/">website</a>
+			    			<a href="https://www.claragrusq.com/">website</a>
+			    			<a href="https://instagram.com/claragrusq">instagram</a>
 			    		</div>
 			    	</div>
 			    	<div class="staff">

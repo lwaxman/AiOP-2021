@@ -48,13 +48,14 @@ get_header();
 						$additional_names 	= get_field('additional_names');
 						$project_title		= get_field('project_title');
 
-						if( ($last_name[0] != $last_letter) ):
-							echo "<span class='d1 artist-letter'>".$last_name[0]."</span>";
-						endif;
-						$last_letter = $last_name[0];
-
 						?>
 						<div class="artist-container">
+							<?php 
+							if( ($last_name[0] != $last_letter) ):
+								echo "<span class='d1 artist-letter'>".$last_name[0]."</span>";
+							endif;
+							$last_letter = $last_name[0]; 
+							?>
 							<div class="artist-copy">
 								<span class="h3 artist-title">
 									<?php echo $first_name . " " . $last_name . " " . $additional_names ?>
@@ -62,10 +63,8 @@ get_header();
 								<p class="artist-title">
 									<?php echo $project_title ?>
 								</p>
-								<!-- <a href="<?php echo $article_link ?>" class="button inline">Read more</a> -->
 								<a class="button inline" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $additional_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 							</div>
-							<!-- <a class="artist-link" href="<">View Project</a> -->
 						</div>
 					<?php endif ?>
 				<?php endwhile ?>
