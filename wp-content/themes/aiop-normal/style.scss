@@ -359,9 +359,12 @@ main.about{
 		flex-direction: column;
 		width: calc(100% - 3rem);
 		padding: 1.5rem;
-		margin-bottom: 4rem;
+		margin-bottom: 6rem;
 		h2{
-			margin-bottom: 1rem;
+			margin-bottom: 2rem;
+			&.thinkers{
+				margin-top: 4rem;
+			}
 		}
 		img{
 			&.blob-person-1{
@@ -967,9 +970,10 @@ footer{
 		}
 		section.people{
 			@include twelve-col-grid;
-			grid-template-rows: 4rem 4rem 8rem auto auto;
+			grid-template-rows: 4rem 4rem auto auto auto auto auto auto;
 			row-gap: 2rem;
 			margin-top: -6rem;
+			margin-bottom: 8rem;
 			img{
 				&.blob-person-1{
 					grid-column: 7/10;
@@ -984,10 +988,12 @@ footer{
 					width: 100%;
 				}	
 			}
-			h2{
+			h2.staff{
 				grid-column: 2/7;
 				grid-row: 3;
+				// margin-bottom: 2rem;
 				margin-bottom: 4rem;
+
 			}
 			div.staff{
 				margin-bottom: 2rem;
@@ -1007,7 +1013,24 @@ footer{
 				grid-column: 7/12;
 				grid-row: 5;
 			}
-
+			h2.thinkers{
+				grid-column: 2/12;
+				grid-row: 6;
+				margin-top: 6rem;
+				margin-bottom: 4rem;
+			}
+			div.thinkers_col_1{
+				grid-column: 2/7;
+				grid-row: 7;
+			}
+			div.thinkers_col_2{
+				grid-column: 7/12;
+				grid-row: 7;
+			}
+			div.read-more{
+				grid-column: 2/12;
+				grid-row: 8;
+			}
 		}
 		section.partners{
 			@include twelve-col-grid;
@@ -1367,7 +1390,8 @@ footer{
 		section.people{
 			@include twelve-col-grid;
 			margin-top: -8rem;
-		    grid-template-rows: 4rem 4rem 8rem 12rem auto;
+			margin-bottom: 8rem;
+		    grid-template-rows: 4rem 4rem 8rem 12rem auto auto auto;
 			img{
 				&.blob-person-1{
 					grid-column: 7/10;
@@ -1382,22 +1406,29 @@ footer{
 					height: 100%;
 				}	
 			}
-			h2{
+			h2.staff{
 				grid-column: 2/6;
-				grid-row: 3;
 				margin-bottom: 4rem;
 			}
 			div.staff.curator{
 				grid-column: 2/6;
-				grid-row: 4;
 			}
 			div.staff_col_1{
 				grid-column: 2/6;
-				grid-row: 5;
 			}
 			div.staff_col_2{
 				grid-column: 6/10;
-				grid-row: 5;
+			}
+			h2.thinkers{
+				grid-column: 2/10;
+				margin-top: 4rem;
+				margin-bottom: 4rem;
+			}
+			div.thinkers_col_1{
+				grid-column: 2/7;
+			}
+			div.thinkers_col_2{
+				grid-column: 6/10;
 			}
 
 		}

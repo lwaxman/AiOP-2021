@@ -62,7 +62,7 @@ get_header();
 		    <section class="people">
 		    	<img src="<?php bloginfo('template_url'); ?>/assets/About_People-Blob-1.png" class="blob-person-1" role="presentation">
 		    	<img src="<?php bloginfo('template_url'); ?>/assets/About_People-Blob-2.png" class="blob-person-2" role="presentation">
-		    	<h2>People</h2>
+		    	<h2 class="staff">People</h2>
 	    		<div class="staff curator">
 		    		<p class="p1 staff_name">Furusho von Puttkammer</p>
 		    		<p class="staff_title h5">Curator</p>
@@ -105,7 +105,7 @@ get_header();
 		    	<div class="staff_col_2">
 			    	<div class="staff">
 			    		<p class="p1 staff_name">Clara Grusq</p>
-			    		<p class="staff_title h5">Admin Assistant</p>
+			    		<p class="staff_title h5">Curatorial Manager</p>
 			    		<div class="staff_links">
 			    			<a href="https://claragrusq.squarespace.com/">website</a>
 			    		</div>
@@ -154,6 +154,44 @@ get_header();
 			    			<a href="http://www.awuart.com/">website</a>
 			    		</div>
 			    	</div>
+		    	</div>
+		    	<h2 class="thinkers">Thinkers in Residence</h2>
+	    		<div class="thinkers_col_1">
+	    			<div class="staff">
+			    		<p class="p1 staff_name">Deshon Chan</p>
+			    		<!-- <div class="staff_links">
+			    			<a href="http://www.anchovyart.com">website</a>
+			    		</div> -->
+	    			</div>
+	    			<div class="staff">
+			    		<p class="p1 staff_name">Anna Harsanyi</p>
+			    		<!-- <div class="staff_links">
+			    			<a href="http://www.anchovyart.com">website</a>
+			    		</div> -->
+	    			</div>
+	    			<div class="staff">
+			    		<p class="p1 staff_name">Michael Kilburn</p>
+			    		<!-- <div class="staff_links">
+			    			<a href="http://www.anchovyart.com">website</a>
+			    		</div> -->
+	    			</div>
+		    	</div>
+		    	<div class="thinkers_col_2">
+	    			<div class="staff">
+			    		<p class="p1 staff_name">LuLu LoLo</p>
+			    		<!-- <div class="staff_links">
+			    			<a href="http://www.anchovyart.com">website</a>
+			    		</div> -->
+	    			</div>
+	    			<div class="staff">
+			    		<p class="p1 staff_name">Natalie Valencia</p>
+			    		<!-- <div class="staff_links">
+			    			<a href="http://www.anchovyart.com">website</a>
+			    		</div> -->
+	    			</div>
+		    	</div>
+		    	<div class="read-more">
+			    	<a href="http://www.artinoddplaces.org/blog/" class="button primary">Read more</a>
 		    	</div>
 
 		    </section>
