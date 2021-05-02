@@ -61,6 +61,7 @@ get_header();
 			$artist_3_link			= get_field('artist_3_weblink', $thisID);
 			$artist_3_link			= get_field('artist_3_weblink', $thisID);
 			$project_image			= get_field('project_image', $thisID);
+			$project_link			= get_field('project_link', $thisID);
 
 
 
@@ -85,12 +86,17 @@ get_header();
 			    </section>
 			    <section class="project">
 					<p class="p2"><?php echo $project_description ?></p>
+					<?php 
+					if($project_link){
+		    			echo "<a class='button primary' target='blank' href='" . esc_url($project_link['url']) . "'>" . esc_attr( $project_link['title'] ) . "</a>";
+		    		}
+					?>
 				</section>
 				<section class="schedule">
 			    	<h5>DATE & TIME</h5>
 					<p class="p1"><?php echo $project_schedule ?></p>
 				</section>
-				 <section class="location">
+				<section class="location">
 					<h5>LOCATION</h5>
 					<p class="p1"><?php echo $project_location ?></p>
 			    </section>
@@ -101,34 +107,34 @@ get_header();
 			    			echo "<p>" . $artist_1_bio . "</p>";
 			    		}
 			    		if($artist_1_link){
-			    			echo "<a target='blank' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
+			    			echo "<a target='blank' class='test' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
 			    		}
 			    		if($artist_2_bio){
 			    			echo "<p>" . $artist_2_bio . "</p>";
 			    		}
 			    		if($artist_2_link){
-			    			echo "<a target='blank' href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
+			    			echo "<a target='blank' class='test' href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
 			    		}
 			    		if($artist_3_bio){
 			    			echo "<p>" . $artist_3_bio . "</p>";
 			    		}
 			    		if($artist_3_link){
-			    			echo "<a target='blank' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
+			    			echo "<a target='blank' class='test' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
 			    		}
 			    	?>
 			    </section>
 			    <section class="artist-nav">
 			    	
-			    	<?php if($prevID): ?>
-					    <div class="arrow prev">
+				    <div class="arrow prev">
+				    	<?php if($prevID): ?>
 			    	        <a href="<?= get_the_permalink($prevID) ?>" rel="prev"><img src="<?php bloginfo('template_url'); ?>/assets/Arrow-Previous.png"><span> </span></a>
-					    </div>
-			    	<?php endif; ?>
-			    	<?php if($nextID): ?>
-			    		<div class="arrow next">
+				    	<?php endif; ?>
+				    </div>
+		    		<div class="arrow next">
+				    	<?php if($nextID): ?>
 			    	        <a href="<?= get_the_permalink($nextID) ?>" rel="next"><span> </span><img src="<?php bloginfo('template_url'); ?>/assets/Arrow-Next.png"></a>
-		    	    	</div>
-			    	<?php endif; ?>
+				    	<?php endif; ?>
+	    	    	</div>
 			    </section>
 		    </main>
 	<?php endif ?>

@@ -549,6 +549,9 @@ main.artist-single{
 		h5{
 			margin: 2rem 0 0.5rem 0;
 		}
+		a.button{
+			margin-bottom: 1.5rem;
+		}
 	}
 	section.bios{
 		margin: 4rem 1.5rem 6rem 1.5rem;
@@ -557,6 +560,7 @@ main.artist-single{
 		}
 		a{
 			color: $pale-blue;
+			display: block;
 		}
 	}
 	section.artist-nav{

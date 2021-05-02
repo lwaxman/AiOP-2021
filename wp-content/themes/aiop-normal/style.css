@@ -529,6 +529,9 @@ main.artist-single section.banner div.banner-text .project-title {
 main.artist-single section.project h5 {
   margin: 2rem 0 0.5rem 0;
 }
+main.artist-single section.project a.button {
+  margin-bottom: 1.5rem;
+}
 main.artist-single section.bios {
   margin: 4rem 1.5rem 6rem 1.5rem;
 }
@@ -537,6 +540,7 @@ main.artist-single section.bios p {
 }
 main.artist-single section.bios a {
   color: #D4F2FF;
+  display: block;
 }
 main.artist-single section.artist-nav {
   height: auto;

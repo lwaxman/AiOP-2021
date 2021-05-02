@@ -19,7 +19,7 @@ get_header();
 
    	$fridayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'sched_friday_start',
+	    'meta_key' => 'schedule_friday_start',
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
@@ -28,7 +28,7 @@ get_header();
 
 	$saturdayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'sched_saturday_start',
+	    'meta_key' => 'schedule_saturday_start',
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
@@ -37,7 +37,7 @@ get_header();
 
 	$sundayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'sched_sunday_start',
+	    'meta_key' => 'schedule_sunday_start',
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
@@ -64,13 +64,13 @@ get_header();
 							$additional_names 	= get_field('additional_names');
 							$project_title		= get_field('project_title');
 							$project_location 	= get_field('project_location');
-							$sched_friday_start		= get_field('sched_friday_start');
-							$sched_friday_end		= get_field('sched_friday_end');
+							$schedule_friday_start		= get_field('schedule_friday_start');
+							$schedule_friday_end		= get_field('schedule_friday_end');
 							?>
 
-							<?php if($sched_friday_start): ?>
+							<?php if($schedule_friday_start): ?>
 								<div class="artist-container">
-									<p class="h3 artist-time"><?php echo $sched_friday_start."&ndash;".$sched_friday_end ?></p>
+									<p class="h3 artist-time"><?php echo $schedule_friday_start."&ndash;".$schedule_friday_end ?></p>
 									<div class="project">
 										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
@@ -97,13 +97,13 @@ get_header();
 							$additional_names 	= get_field('additional_names');
 							$project_title		= get_field('project_title');
 							$project_location 	= get_field('project_location');
-							$sched_saturday_start		= get_field('sched_saturday_start');
-							$sched_saturday_end		= get_field('sched_saturday_end');
+							$schedule_saturday_start		= get_field('schedule_saturday_start');
+							$schedule_saturday_end		= get_field('schedule_saturday_end');
 							?>
 
-							<?php if($sched_friday_start): ?>
+							<?php if($schedule_saturday_start): ?>
 								<div class="artist-container">
-									<p class="h3 artist-time"><?php echo $sched_saturday_start."&ndash;".$sched_saturday_end ?></p>
+									<p class="h3 artist-time"><?php echo $schedule_saturday_start."&ndash;".$schedule_saturday_end ?></p>
 									<div class="project">
 										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
@@ -130,13 +130,13 @@ get_header();
 							$additional_names 	= get_field('additional_names');
 							$project_title		= get_field('project_title');
 							$project_location 	= get_field('project_location');
-							$sched_sunday_start		= get_field('sched_sunday_start');
-							$sched_sunday_end		= get_field('sched_sunday_end');
+							$schedule_sunday_start		= get_field('schedule_sunday_start');
+							$schedule_sunday_end		= get_field('schedule_sunday_end');
 							?>
 
-							<?php if($sched_friday_start): ?>
+							<?php if($schedule_sunday_start): ?>
 								<div class="artist-container">
-									<p class="h3 artist-time"><?php echo $sched_sunday_start."&ndash;".$sched_sunday_end ?></p>
+									<p class="h3 artist-time"><?php echo $schedule_sunday_start."&ndash;".$schedule_sunday_end ?></p>
 									<div class="project">
 										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
