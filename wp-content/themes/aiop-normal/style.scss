@@ -669,6 +669,25 @@ main.partners{
 	}
 }
 
+main.maps{
+	width: calc(100% - 3rem);
+	margin: 4rem 1.5rem 0 1.5rem;
+	img.map{
+		width: 100%;
+		height: auto;
+	}
+	img.logo{
+		width: 6rem;
+		margin-bottom: 1rem;
+	}
+	p.h2, img.map{
+		margin-bottom: 1rem;
+	}
+	div.partner{
+		margin-bottom: 4rem;
+	}
+}
+
 main.press{
 	section.press-posts{
 		width: calc(100% - 3rem);
@@ -1398,6 +1417,24 @@ footer{
 			&.pollinate{
 				grid-column: 2/9;
 				grid-row: 3/4;
+			}
+		}
+	}
+
+
+	main.maps{
+		@include twelve-col-grid;
+		// margin: 6rem 0 6rem 0;
+		div.partner{
+			img.logo{
+				height: 6rem;
+				width: auto;
+			}
+			&.popwalk{
+				grid-column: 2/7;
+			}
+			&.pollinate{
+				grid-column: 7/12;
 			}
 		}
 	}

@@ -645,6 +645,25 @@ main.partners .partner p {
   margin-bottom: 1.5rem;
 }
 
+main.maps {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.maps img.map {
+  width: 100%;
+  height: auto;
+}
+main.maps img.logo {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+main.maps p.h2, main.maps img.map {
+  margin-bottom: 1rem;
+}
+main.maps div.partner {
+  margin-bottom: 4rem;
+}
+
 main.press section.press-posts {
   width: calc(100% - 3rem);
   margin: 4rem 1.5rem 0 1.5rem;
@@ -1396,6 +1415,24 @@ footer .social .social-icon svg {
   main.partners .partner.pollinate {
     grid-column: 2/9;
     grid-row: 3/4;
+  }
+
+  main.maps {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+  }
+  main.maps div.partner img.logo {
+    height: 6rem;
+    width: auto;
+  }
+  main.maps div.partner.popwalk {
+    grid-column: 2/7;
+  }
+  main.maps div.partner.pollinate {
+    grid-column: 7/12;
   }
 
   main.donate {
