@@ -60,7 +60,7 @@ get_header();
 							<p class="press-title">
 								<?php echo $article_title  ?> 
 							</p>
-							<a href="<?php echo $article_link ?>" class="button inline">Read more</a>
+							<a href="<?php echo $article_link ?>" target="_blank" class="button inline">Read more</a>
 						</div>
 					<?php endif ?>
 				<?php endwhile ?>
