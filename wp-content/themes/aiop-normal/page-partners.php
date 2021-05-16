@@ -36,7 +36,8 @@ get_header();
 	    	<p class="h2">Popwalk</p>
 			<p class="p2r"><?php the_field('partners_popwalk'); ?></p>
 			<div class="links">
-				<a href="http://www.popwalkapp.com/" class="button primary">View website</a>
+                <a href=" https://sitessetforknowledge.org/2020/10/16/art-in-odd-places-popwalk/" class="button primary">Festival map</a>
+				<a href="http://www.popwalkapp.com/" class="button secondary">View website</a>
 			</div>
     	</div>
 
@@ -48,7 +49,8 @@ get_header();
 	    	<p class="h2">Pollinate</p>
 			<p class="p2r"><?php the_field('partners_pollinate'); ?></p>
 			<div class="links">
-				<a href="https://www.pollinate.co/" class="button primary">View website</a>
+				<a href="https://events.pollinate.co/#/exhibition/168" class="button primary">Festival map</a>
+                <a href="https://www.pollinate.co/" class="button secondary">View website</a>
 			</div>
     	</div>
 
