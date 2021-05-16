@@ -36,7 +36,7 @@ get_header();
 			<div class="artists">
 				<h2>Participating </br>artists & groups</h2>
 				<a class="button primary" href="<?php bloginfo('template_url'); ?>/artists">Explore projects</a>
-				<!-- <a class="button secondary" href="<?php //bloginfo('template_url'); ?>/schedule">View schedule</a> -->
+				<a class="button secondary" href="<?php bloginfo('template_url'); ?>/schedule">View schedule</a>
 			</div>
 		</main>
 		<section class="home-covid">

@@ -437,6 +437,16 @@ main.about section.partners .partner p.h3 {
 main.about section.partners .read-more {
   margin-top: 2rem;
 }
+main.about section.support {
+  width: calc(100% - 3rem);
+  padding: 1.5rem;
+}
+main.about section.support h2 {
+  margin: 4rem 0 2rem 0;
+}
+main.about section.support h3 {
+  margin: 2rem 0 1rem 0;
+}
 
 main.artist-listing section.artists {
   width: calc(100% - 3rem);
@@ -987,6 +997,7 @@ footer .social .social-icon svg {
     padding: 6rem 1.5rem;
   }
   main.about section.festival .mission {
+    margin-right: 2rem;
     grid-column: 2/7;
   }
   main.about section.festival .history {
@@ -1114,6 +1125,32 @@ footer .social .social-icon svg {
   }
   main.about section.partners .read-more {
     grid-column: 1/6;
+  }
+  main.about section.support {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+    row-gap: 2rem;
+    margin-top: 6rem;
+  }
+  main.about section.support h2 {
+    grid-column: 2/12;
+    grid-row: 1/2;
+  }
+  main.about section.support div.dedication {
+    grid-column: 2/9;
+    grid-row: 2/3;
+  }
+  main.about section.support div.consultation {
+    margin-right: 2rem;
+    grid-column: 2/5;
+    grid-row: 3/4;
+  }
+  main.about section.support div.thanks {
+    grid-column: 5/12;
+    grid-row: 3/4;
   }
 
   main.artist-listing {

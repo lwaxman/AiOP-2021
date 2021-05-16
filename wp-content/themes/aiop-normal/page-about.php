@@ -207,19 +207,34 @@ get_header();
 			    	<div class="partner popwalk">
 				    	<img src="<?php bloginfo('template_url'); ?>/assets/Partners_popwalk-logo.png" alt="Popwalk logo">
 				    	<p class="h3">Popwalk</p>
-						<p><?php the_field('about_popwalk'); ?></p>
+						<p class="p2r"><?php the_field('about_popwalk'); ?></p>
 						<!-- <a href="http://www.popwalkapp.com/" class="button secondary">View website</a> -->
 			    	</div>
 			    	<div class="partner pollinate">
 			    		<img src="<?php bloginfo('template_url'); ?>/assets/Partners_pollinate-logomark.png" alt="Pollinate logo">
 				    	<p class="h3">Pollinate</p>
-						<p><?php the_field('about_pollinate'); ?></p>
+						<p class="p2r"><?php the_field('about_pollinate'); ?></p>
 						<!-- <a href="https://www.pollinate.co/" class="button secondary">View website</a> -->
 			    	</div>
 			    	<div class="read-more">
 						<a href="<?php echo get_home_url().'/partners'; ?>" class="button primary">Read more</a>
 			    	</div>
 
+		    	</div>
+		    </section>
+
+		    <section class="support">
+		    	<h2>Support</h2>
+		    	<div class="dedication">
+		    		<p class="p2"><?php the_field('about_dedication'); ?></p>
+		    	</div>
+		    	<div class="consultation">
+		    		<h3>Consultation</h3>
+		    		<p class="p2r"><?php the_field('about_consultants'); ?></p>
+		    	</div>
+		    	<div class="thanks">
+		    		<h3>Thanks</h3>
+		    		<p class="p2r"><?php the_field('about_thanks'); ?></p>
 		    	</div>
 		    </section>
     	</section>
